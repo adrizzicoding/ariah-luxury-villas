@@ -10,7 +10,7 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #F7F4EF; /* Tulum warm organic sand tone */
+      background-color: #F7F4EF;
       color: #2C2825;
     }
     h1, h2, h3, .font-serif {
@@ -21,10 +21,10 @@
 <body class="antialiased selection:bg-[#C5A880] selection:text-white">
 
   <!-- HEADER & LANGUAGE SELECTOR -->
-  <header class="w-full border-b border-[#E5DFD5] bg-[#F7F4EF]/90 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+  <header class="w-full border-b border-[#E5DFD5] bg-[#F7F4EF]/95 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-10 w-auto object-contain">
+        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-14 w-auto object-contain mix-blend-multiply">
         <div>
           <span class="font-serif text-lg tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
           <span class="block text-[9px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
@@ -38,16 +38,21 @@
         <a href="#reserve" class="nav-reserve hover:text-[#C5A880] transition-colors font-bold">Reservations</a>
       </nav>
       <div class="flex items-center space-x-4">
-        <!-- 6-Language Switcher -->
-        <select id="lang-switcher" onchange="switchLanguage(this.value)" class="bg-transparent text-xs uppercase tracking-widest text-[#6C625B] font-semibold border border-[#E5DFD5] rounded-full px-3 py-1.5 focus:outline-none cursor-pointer">
-          <option value="en">EN</option>
-          <option value="pt">PT</option>
-          <option value="it">IT</option>
-          <option value="fr">FR</option>
-          <option value="es">ES</option>
-          <option value="de">DE</option>
-        </select>
-        <a href="#reserve" class="nav-btn-reserve bg-[#2C2825] hover:bg-[#C5A880] text-white text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full transition-colors hidden sm:inline-block">
+        <!-- Refined Language Switcher -->
+        <div class="relative">
+          <select id="lang-switcher" onchange="switchLanguage(this.value)" class="appearance-none bg-white/60 hover:bg-white text-xs uppercase tracking-widest text-[#2C2825] font-semibold border border-[#D9CEBF] rounded-full px-4 py-2 pr-8 focus:outline-none focus:border-[#C5A880] cursor-pointer shadow-sm transition-all">
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+            <option value="it">IT</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+            <option value="de">DE</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#6C625B]">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </div>
+        </div>
+        <a href="#reserve" class="nav-btn-reserve bg-[#2C2825] hover:bg-[#C5A880] text-white text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full transition-colors hidden sm:inline-block shadow-sm">
           Book Now
         </a>
       </div>
@@ -108,15 +113,13 @@
     </div>
   </section>
 
-  <!-- GALLERY & AIRBNB EMBED -->
+  <!-- GALLERY -->
   <section id="gallery" class="py-24 max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
       <span class="gallery-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Visual Tour</span>
       <h2 class="gallery-title font-serif text-3xl md:text-4xl text-[#2C2825]">Explore the Spaces</h2>
     </div>
-    
-    <!-- Native Photos Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="overflow-hidden rounded-2xl shadow-sm">
         <img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Beachfront" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
       </div>
@@ -132,14 +135,8 @@
       <div class="overflow-hidden rounded-2xl shadow-sm">
         <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Bedroom" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
       </div>
-    </div>
-
-    <!-- Airbnb Embedded Widget -->
-    <div class="flex justify-center my-12">
-      <div class="airbnb-embed-frame" data-id="1774541850606349498" data-view="home" data-hide-price="true" style="width:100%;max-width:450px;height:300px;margin:auto">
-        <a href="https://www.airbnb.it/rooms/1774541850606349498?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Visto su Airbnb</a>
-        <a href="https://www.airbnb.it/rooms/1774541850606349498?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Casa · Cruz · ★Novità · 2 camere da letto · 6 letti · 3 bagni</a>
-        <script async="" src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
+      <div class="overflow-hidden rounded-2xl shadow-sm">
+        <img src="https://lh3.googleusercontent.com/d/1hs6fbcA4WHYerZvH2s4SKa1nzjx59SJX" alt="Dining Area" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
       </div>
     </div>
   </section>
@@ -254,7 +251,7 @@
   <!-- FOOTER -->
   <footer class="w-full border-t border-[#E5DFD5] py-12 text-center text-xs text-[#8C827A] bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-8 w-auto mx-auto mb-3 object-contain opacity-80">
+      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-10 w-auto mx-auto mb-3 object-contain mix-blend-multiply opacity-85">
       <span class="font-serif text-sm tracking-widest text-[#2C2825] uppercase font-semibold block mb-2">Ariah Luxury Villas</span>
       <p class="footer-loc mb-4">Praia do Preá, Ceará - Brazil</p>
       <p class="footer-copy">&copy; 2026 Ariah Luxury Villas. All rights reserved.</p>
@@ -379,7 +376,7 @@
         villaP1: "Ariah Luxury Villas bietet weitläufige, lichtdurchflutete Open-Air-Wohnbereiche, exquisite handgefertigte Details und absolute Privatsphäre nach einer Kitesession.",
         villaP2: "Ausgestattet mit Annehmlichkeiten der Spitzenklasse und ruhigen Suiten für Familie und Freunde.",
         amenTag: "Absoluter Komfort", amenTitle: "Exklusive Ausstattung",
-        amen1Title: "Privates Pool & Deck", amen1Desc: "Ein privater Rückzugsort im Freien für absolute Entspannung unter der Sonne von Ceará.",
+        amen1Title: "Privater Pool & Deck", amen1Desc: "Ein privater Rückzugsort im Freien für absolute Entspannung unter der Sonne von Ceará.",
         amen2Title: "Gourmet-Küche", amen2Desc: "Voll ausgestattete Profi-Küche für unvergessliche kulinarische Zusammenkünfte.",
         amen3Title: "Top-Lage", amen3Desc: "Nur wenige Minuten von weltberühmten Kitespots und erstklassigen Restaurants entfernt.",
         galTag: "Galerie", galTitle: "Entdecken Sie die Räume",
