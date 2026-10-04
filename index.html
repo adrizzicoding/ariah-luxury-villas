@@ -33,12 +33,12 @@
 
   <!-- HEADER & LANGUAGE SELECTOR -->
   <header class="w-full border-b border-[#E5DFD5] bg-[#F7F4EF]/95 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
-      <div class="flex items-center space-x-3 h-full py-3">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 sm:h-24 flex items-center justify-between">
+      <div class="flex items-center space-x-3 h-full py-2 sm:py-3">
         <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-full w-auto object-contain mix-blend-multiply">
         <div>
-          <span class="font-serif text-lg tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
-          <span class="block text-[9px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
+          <span class="font-serif text-base sm:text-lg tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
+          <span class="block text-[8px] sm:text-[9px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
         </div>
       </div>
       <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest text-[#6C625B] font-medium">
@@ -48,10 +48,10 @@
         <a href="#location" class="nav-location hover:text-[#C5A880] transition-colors">Location</a>
         <a href="#reserve" class="nav-reserve hover:text-[#C5A880] transition-colors font-bold">Reservations</a>
       </nav>
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-3 sm:space-x-4">
         <!-- Refined Language Switcher -->
         <div class="relative">
-          <select id="lang-switcher" onchange="switchLanguage(this.value)" class="appearance-none bg-white/60 hover:bg-white text-xs uppercase tracking-widest text-[#2C2825] font-semibold border border-[#D9CEBF] rounded-full px-4 py-2 pr-8 focus:outline-none focus:border-[#C5A880] cursor-pointer shadow-sm transition-all">
+          <select id="lang-switcher" onchange="switchLanguage(this.value)" class="appearance-none bg-white/60 hover:bg-white text-[11px] sm:text-xs uppercase tracking-widest text-[#2C2825] font-semibold border border-[#D9CEBF] rounded-full px-3 sm:px-4 py-1.5 sm:py-2 pr-7 sm:pr-8 focus:outline-none focus:border-[#C5A880] cursor-pointer shadow-sm transition-all">
             <option value="en">EN</option>
             <option value="pt">PT</option>
             <option value="it">IT</option>
@@ -59,11 +59,11 @@
             <option value="es">ES</option>
             <option value="de">DE</option>
           </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#6C625B]">
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 sm:px-3 text-[#6C625B]">
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </div>
         </div>
-        <a href="#reserve" class="nav-btn-reserve bg-[#2C2825] hover:bg-[#C5A880] text-white text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full transition-colors hidden sm:inline-block shadow-sm">
+        <a href="#reserve" class="nav-btn-reserve bg-[#2C2825] hover:bg-[#C5A880] text-white text-[11px] sm:text-xs uppercase tracking-widest font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-colors hidden sm:inline-block shadow-sm">
           Book Now
         </a>
       </div>
@@ -71,7 +71,7 @@
   </header>
 
   <!-- HERO CAROUSEL SECTION -->
-  <section class="relative h-[85vh] min-h-[550px] flex items-center justify-center text-white overflow-hidden">
+  <section class="relative h-[80vh] sm:h-[85vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
     <!-- Carousel Background Slides -->
     <div class="hero-slide active" style="background-image: url('https://lh3.googleusercontent.com/d/1ULZ209b4rCwfKUhkeI7rLAD8nKszuyzu');"></div>
     <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/d/1_IWrQBfP2uJEEagBSIaCs8-NZgTh-Etd');"></div>
@@ -81,48 +81,48 @@
     <div class="absolute inset-0 bg-gradient-to-t from-[#2C2825] via-black/30 to-black/40"></div>
     
     <div class="relative z-10 text-center max-w-2xl mx-auto px-6">
-      <span class="hero-subtitle text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold mb-3 block">Barefoot Luxury by the Ocean</span>
-      <h1 class="font-serif text-4xl md:text-6xl mb-6 tracking-wide leading-tight">Ariah Luxury Villas</h1>
-      <p class="hero-desc text-sm md:text-base text-stone-200 font-light mb-8 max-w-lg mx-auto">An exclusive sanctuary in Praia do Preá, harmonizing bohemian organic architecture with the raw beauty of the Ceará coastline.</p>
-      <a href="#reserve" class="hero-cta inline-block bg-[#C5A880] hover:bg-white hover:text-[#2C2825] text-white text-xs uppercase tracking-widest font-semibold px-8 py-4 rounded-full transition-all shadow-lg">
+      <span class="hero-subtitle text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold mb-3 block">Barefoot Luxury by the Ocean</span>
+      <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl mb-4 sm:mb-6 tracking-wide leading-tight">Ariah Luxury Villas</h1>
+      <p class="hero-desc text-xs sm:text-sm md:text-base text-stone-200 font-light mb-6 sm:mb-8 max-w-lg mx-auto">An exclusive sanctuary in Praia do Preá, harmonizing bohemian organic architecture with the raw beauty of the Ceará coastline.</p>
+      <a href="#reserve" class="hero-cta inline-block bg-[#C5A880] hover:bg-white hover:text-[#2C2825] text-white text-[11px] sm:text-xs uppercase tracking-widest font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all shadow-lg">
         Check Availability
       </a>
     </div>
   </section>
 
   <!-- ABOUT / THE VILLA -->
-  <section id="the-villa" class="py-24 max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <section id="the-villa" class="py-16 sm:py-24 max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
       <div>
         <span class="villa-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">The Experience</span>
-        <h2 class="villa-title font-serif text-3xl md:text-4xl text-[#2C2825] mb-6">Organic architecture intertwined with nature</h2>
-        <p class="villa-p1 text-sm text-[#6C625B] leading-relaxed mb-4">Ariah Luxury Villas offer expansive open-air living spaces bathed in natural sunlight, refined artisan finishes, and ultimate privacy to unwind after an exhilarating kitesurfing session or a sunset stroll on Preá beach.</p>
-        <p class="villa-p2 text-sm text-[#6C625B] leading-relaxed">Thoughtfully curated with high-end amenities, seamless indoor-outdoor flow, and serene suites designed to welcome family and friends with understated elegance.</p>
+        <h2 class="villa-title font-serif text-2xl sm:text-3xl md:text-4xl text-[#2C2825] mb-4 sm:mb-6">Organic architecture intertwined with nature</h2>
+        <p class="villa-p1 text-xs sm:text-sm text-[#6C625B] leading-relaxed mb-4">Ariah Luxury Villas offer expansive open-air living spaces bathed in natural sunlight, refined artisan finishes, and ultimate privacy to unwind after an exhilarating kitesurfing session or a sunset stroll on Preá beach.</p>
+        <p class="villa-p2 text-xs sm:text-sm text-[#6C625B] leading-relaxed">Thoughtfully curated with high-end amenities, seamless indoor-outdoor flow, and serene suites designed to welcome family and friends with understated elegance.</p>
       </div>
       <div>
-        <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Bedroom Suite" class="rounded-2xl shadow-md object-cover w-full h-[400px]">
+        <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Bedroom Suite" class="rounded-2xl shadow-md object-cover w-full h-[300px] sm:h-[400px]">
       </div>
     </div>
   </section>
 
   <!-- AMENITIES -->
-  <section id="amenities" class="py-20 bg-white border-y border-[#E5DFD5]">
+  <section id="amenities" class="py-16 sm:py-20 bg-white border-y border-[#E5DFD5]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12 sm:mb-16">
         <span class="amenities-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Absolute Comfort</span>
-        <h2 class="amenities-title font-serif text-3xl text-[#2C2825]">Exquisite Amenities</h2>
+        <h2 class="amenities-title font-serif text-2xl sm:text-3xl text-[#2C2825]">Exquisite Amenities</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
-          <h3 class="amen-1-title font-serif text-xl font-semibold mb-3 text-[#2C2825]">Private Pool & Deck</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div class="p-6 sm:p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
+          <h3 class="amen-1-title font-serif text-lg sm:text-xl font-semibold mb-3 text-[#2C2825]">Private Pool & Deck</h3>
           <p class="amen-1-desc text-xs text-[#6C625B] leading-relaxed">An exclusive outdoor lounging sanctuary designed for absolute relaxation under the Ceará sun.</p>
         </div>
-        <div class="p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
-          <h3 class="amen-2-title font-serif text-xl font-semibold mb-3 text-[#2C2825]">Gourmet Kitchen</h3>
+        <div class="p-6 sm:p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
+          <h3 class="amen-2-title font-serif text-lg sm:text-xl font-semibold mb-3 text-[#2C2825]">Gourmet Kitchen</h3>
           <p class="amen-2-desc text-xs text-[#6C625B] leading-relaxed">Fully equipped professional kitchen designed for memorable culinary gatherings.</p>
         </div>
-        <div class="p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
-          <h3 class="amen-3-title font-serif text-xl font-semibold mb-3 text-[#2C2825]">Prime Location</h3>
+        <div class="p-6 sm:p-8 rounded-2xl bg-[#F7F4EF] border border-[#E5DFD5]">
+          <h3 class="amen-3-title font-serif text-lg sm:text-xl font-semibold mb-3 text-[#2C2825]">Prime Location</h3>
           <p class="amen-3-desc text-xs text-[#6C625B] leading-relaxed">Minutes away from world-class kitesurfing spots, downwind launches, and acclaimed beachfront dining.</p>
         </div>
       </div>
@@ -130,69 +130,76 @@
   </section>
 
   <!-- GALLERY -->
-  <section id="gallery" class="py-24 max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16">
+  <section id="gallery" class="py-16 sm:py-24 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12 sm:mb-16">
       <span class="gallery-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Visual Tour</span>
-      <h2 class="gallery-title font-serif text-3xl md:text-4xl text-[#2C2825]">Explore the Spaces</h2>
+      <h2 class="gallery-title font-serif text-2xl sm:text-3xl md:text-4xl text-[#2C2825]">Explore the Spaces</h2>
+      <p class="text-xs text-[#8C827A] mt-2">Click any photo to view in full screen</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/172iEv9cfxhVszl5QTCBqIAa0gCWblp7H" alt="Property" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1f9kB4eA7D_XwSX9upzX3XAI381IEScDj" alt="Living Room" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1IlL_FhTsW20L_Hgy87y993R252el0_WE" alt="Kitchen" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1wVHCBRDzjbrcQW5W64L-v8E0OEu3EYEH" alt="Bed Detail" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/13xpdX4K4yQuDwHV3YOCGCh28miSk4rJU" alt="Day Pool" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1_IWrQBfP2uJEEagBSIaCs8-NZgTh-Etd" alt="Night Pool" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1aA9apVkgIyEylOYzx_glc4iMWI1o9m8E" alt="Stairs" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/16WDxIq5_qF7d4kla5b2XIAh6HkaAsYAE" alt="Toilet Detail" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1OyHFHdy08BZdJf7RChiI9Q3kjWptc8A_" alt="Drone View" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1wAvrTVEPC66KKs77e9TpuvnVGNZ4hcqG" alt="Room 2" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Pool 1" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
-      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Beach" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Gallery items will be populated by script -->
     </div>
   </section>
 
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/70 hover:text-white p-2 focus:outline-none z-50" aria-label="Close lightbox">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <button onclick="prevImage()" class="absolute left-4 sm:left-8 text-white/70 hover:text-white p-3 bg-black/40 hover:bg-black/60 rounded-full focus:outline-none transition-colors z-50" aria-label="Previous image">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center justify-center px-12">
+      <img id="lightbox-img" src="" alt="Enlarged View" class="max-h-[75vh] max-w-full object-contain rounded-lg shadow-2xl">
+      <p id="lightbox-caption" class="text-stone-300 text-xs sm:text-sm uppercase tracking-widest mt-4 font-light"></p>
+    </div>
+    <button onclick="nextImage()" class="absolute right-4 sm:right-8 text-white/70 hover:text-white p-3 bg-black/40 hover:bg-black/60 rounded-full focus:outline-none transition-colors z-50" aria-label="Next image">
+      <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </div>
+
   <!-- LOCATION -->
-  <section id="location" class="py-20 bg-white border-t border-[#E5DFD5]">
+  <section id="location" class="py-16 sm:py-20 bg-white border-t border-[#E5DFD5]">
     <div class="max-w-6xl mx-auto px-6 text-center max-w-2xl">
       <span class="loc-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">The Destination</span>
-      <h2 class="loc-title font-serif text-3xl text-[#2C2825] mb-4">Praia do Preá • Ceará</h2>
-      <p class="loc-desc text-sm text-[#6C625B] leading-relaxed mb-6">Nestled along one of Brazil's most breathtaking coastlines, globally celebrated for consistent trade winds, pristine beaches, and close proximity to Jericoacoara National Park.</p>
+      <h2 class="loc-title font-serif text-2xl sm:text-3xl text-[#2C2825] mb-4">Praia do Preá • Ceará</h2>
+      <p class="loc-desc text-xs sm:text-sm text-[#6C625B] leading-relaxed mb-6">Nestled along one of Brazil's most breathtaking coastlines, globally celebrated for consistent trade winds, pristine beaches, and close proximity to Jericoacoara National Park.</p>
     </div>
   </section>
 
   <!-- RESERVATION SECTION -->
-  <section id="reserve" class="max-w-3xl mx-auto px-6 py-24">
+  <section id="reserve" class="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
     
-    <div class="text-center mb-12">
+    <div class="text-center mb-10 sm:mb-12">
       <span class="res-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Plan Your Journey</span>
-      <h2 class="res-title font-serif text-3xl md:text-4xl text-[#2C2825] mb-3">Book Your Stay</h2>
-      <p class="res-desc text-sm text-[#6C625B] max-w-md mx-auto">Select your check-in and check-out dates on the calendar below to check real-time availability.</p>
+      <h2 class="res-title font-serif text-2xl sm:text-3xl md:text-4xl text-[#2C2825] mb-3">Book Your Stay</h2>
+      <p class="res-desc text-xs sm:text-sm text-[#6C625B] max-w-md mx-auto">Select your check-in and check-out dates on the calendar below to check real-time availability.</p>
     </div>
 
     <!-- CALENDAR CARD -->
-    <div class="bg-white border border-[#E5DFD5] rounded-2xl p-6 md:p-8 shadow-sm">
+    <div class="bg-white border border-[#E5DFD5] rounded-2xl p-4 sm:p-8 shadow-sm">
       
       <!-- Calendar Header -->
       <div class="flex items-center justify-between mb-6">
         <button onclick="changeMonth(-1)" class="p-2 rounded-full hover:bg-[#F7F4EF] text-[#2C2825] transition-colors" aria-label="Previous month">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
         </button>
-        <h3 id="calendar-month-year" class="font-serif text-lg text-[#2C2825] font-medium"></h3>
+        <h3 id="calendar-month-year" class="font-serif text-base sm:text-lg text-[#2C2825] font-medium"></h3>
         <button onclick="changeMonth(1)" class="p-2 rounded-full hover:bg-[#F7F4EF] text-[#2C2825] transition-colors" aria-label="Next month">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
         </button>
       </div>
 
       <!-- Weekday Labels -->
-      <div id="weekday-labels" class="grid grid-cols-7 text-center text-[11px] font-semibold text-[#8C827A] uppercase tracking-wider mb-3">
+      <div id="weekday-labels" class="grid grid-cols-7 text-center text-[10px] sm:text-[11px] font-semibold text-[#8C827A] uppercase tracking-wider mb-3">
         <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
       </div>
 
       <!-- Days Grid -->
-      <div id="calendar-days" class="grid grid-cols-7 gap-y-2 text-center text-sm"></div>
+      <div id="calendar-days" class="grid grid-cols-7 gap-y-1 sm:gap-y-2 text-center text-xs sm:text-sm"></div>
 
       <!-- Legend -->
-      <div id="calendar-legend" class="flex items-center justify-center space-x-6 mt-8 pt-6 border-t border-[#E5DFD5] text-xs text-[#6C625B]">
+      <div id="calendar-legend" class="flex flex-wrap items-center justify-center gap-4 sm:space-x-6 mt-6 sm:mt-8 pt-6 border-t border-[#E5DFD5] text-xs text-[#6C625B]">
         <div class="flex items-center space-x-2">
           <span class="w-3 h-3 rounded-full bg-white border border-[#E5DFD5]"></span>
           <span class="legend-avail">Available</span>
@@ -209,7 +216,7 @@
     </div>
 
     <!-- PRICING & ENQUIRY BOX -->
-    <div id="price-summary-container" class="mt-6 bg-white border border-[#E5DFD5] rounded-2xl p-6 md:p-8 shadow-sm">
+    <div id="price-summary-container" class="mt-6 bg-white border border-[#E5DFD5] rounded-2xl p-5 sm:p-8 shadow-sm">
       <div id="price-summary">
         <h4 id="quotation-title" class="font-bold text-xs uppercase tracking-wider text-[#2C2825]">Quotation Summary</h4>
         <p id="quotation-subtitle" class="text-xs text-[#8C827A] pt-1">Select your check-in and check-out dates above.</p>
@@ -217,12 +224,12 @@
 
       <!-- HIDDEN FORM CONTAINER -->
       <div id="enquiry-form-container" class="hidden mt-6 pt-6 border-t border-[#E5DFD5]">
-        <h4 id="form-heading" class="font-serif text-lg text-[#2C2825] mb-4">Send Reservation Enquiry</h4>
+        <h4 id="form-heading" class="font-serif text-base sm:text-lg text-[#2C2825] mb-4">Send Reservation Enquiry</h4>
         
         <input type="hidden" id="selected-checkin">
         <input type="hidden" id="selected-checkout">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div>
             <label id="lbl-name" class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">Full Name</label>
             <input type="text" id="client-name" class="w-full px-4 py-2.5 rounded-lg border border-[#E5DFD5] text-sm focus:outline-none focus:border-[#C5A880]" placeholder="Your name">
@@ -233,7 +240,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div>
             <label id="lbl-phone" class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">Phone / WhatsApp</label>
             <input type="tel" id="client-phone" class="w-full px-4 py-2.5 rounded-lg border border-[#E5DFD5] text-sm focus:outline-none focus:border-[#C5A880]" placeholder="+39 ... / +55 ...">
@@ -259,9 +266,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="w-full border-t border-[#E5DFD5] py-12 text-center text-xs text-[#8C827A] bg-white">
+  <footer class="w-full border-t border-[#E5DFD5] py-10 sm:py-12 text-center text-xs text-[#8C827A] bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-12 w-auto mx-auto mb-3 object-contain mix-blend-multiply opacity-85">
+      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-10 w-auto mx-auto mb-3 object-contain mix-blend-multiply opacity-85">
       <span class="font-serif text-sm tracking-widest text-[#2C2825] uppercase font-semibold block mb-2">Ariah Luxury Villas</span>
       <p class="footer-loc mb-4">Praia do Preá, Ceará - Brazil</p>
       <p class="footer-copy">&copy; 2026 Ariah Luxury Villas. All rights reserved.</p>
@@ -277,6 +284,72 @@
     let selectedCheckinDate = null;
     let selectedCheckoutDate = null;
     let currentLang = 'en';
+
+    // Gallery Images Data
+    const galleryImages = [
+      { url: "https://lh3.googleusercontent.com/d/172iEv9cfxhVszl5QTCBqIAa0gCWblp7H", title: "Property Exterior" },
+      { url: "https://lh3.googleusercontent.com/d/1f9kB4eA7D_XwSX9upzX3XAI381IEScDj", title: "Living Room" },
+      { url: "https://lh3.googleusercontent.com/d/1IlL_FhTsW20L_Hgy87y993R252el0_WE", title: "Gourmet Kitchen" },
+      { url: "https://lh3.googleusercontent.com/d/1wVHCBRDzjbrcQW5W64L-v8E0OEu3EYEH", title: "Bed Detail" },
+      { url: "https://lh3.googleusercontent.com/d/13xpdX4K4yQuDwHV3YOCGCh28miSk4rJU", title: "Day Pool View" },
+      { url: "https://lh3.googleusercontent.com/d/1_IWrQBfP2uJEEagBSIaCs8-NZgTh-Etd", title: "Night Pool Sanctuary" },
+      { url: "https://lh3.googleusercontent.com/d/1aA9apVkgIyEylOYzx_glc4iMWI1o9m8E", title: "Architectural Stairs" },
+      { url: "https://lh3.googleusercontent.com/d/16WDxIq5_qF7d4kla5b2XIAh6HkaAsYAE", title: "Toilet Detail" },
+      { url: "https://lh3.googleusercontent.com/d/1OyHFHdy08BZdJf7RChiI9Q3kjWptc8A_", title: "Drone View" },
+      { url: "https://lh3.googleusercontent.com/d/1wAvrTVEPC66KKs77e9TpuvnVGNZ4hcqG", title: "Suite Room" },
+      { url: "https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6", title: "Pool Lounge" },
+      { url: "https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U", title: "Preá Beachfront" }
+    ];
+
+    let currentLightboxIndex = 0;
+
+    function renderGallery() {
+      const container = document.getElementById('gallery-grid');
+      container.innerHTML = galleryImages.map((img, index) => `
+        <div class="overflow-hidden rounded-2xl shadow-sm cursor-pointer group relative" onclick="openLightbox(${index})">
+          <img src="${img.url}" alt="${img.title}" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white text-xs uppercase tracking-widest font-semibold">${img.title}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      updateLightboxContent();
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateLightboxContent() {
+      const img = galleryImages[currentLightboxIndex];
+      document.getElementById('lightbox-img').src = img.url;
+      document.getElementById('lightbox-caption').innerText = `${img.title} (${currentLightboxIndex + 1} / ${galleryImages.length})`;
+    }
+
+    function nextImage() {
+      currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+      updateLightboxContent();
+    }
+
+    function prevImage() {
+      currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateLightboxContent();
+    }
+
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', (e) => {
+      if (document.getElementById('lightbox').classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    });
 
     // Hero Carousel Script
     let currentSlide = 0;
@@ -535,7 +608,7 @@
         const isBooked = bookedDatesSet.has(dayStr);
         const isPast = dayStr < todayStr;
 
-        let btnClass = "h-9 w-9 mx-auto rounded-full flex items-center justify-center text-xs transition-all font-medium ";
+        let btnClass = "h-8 w-8 sm:h-9 sm:w-9 mx-auto rounded-full flex items-center justify-center text-xs transition-all font-medium ";
         let isClickable = true;
 
         if (isBooked || isPast) {
@@ -545,9 +618,9 @@
           btnClass += "bg-white border border-[#E5DFD5] hover:border-[#C5A880] text-[#2C2825] cursor-pointer";
           
           if (selectedCheckinDate === dayStr || selectedCheckoutDate === dayStr) {
-            btnClass = "h-9 w-9 mx-auto rounded-full flex items-center justify-center text-xs font-bold bg-[#C5A880] text-white shadow-sm";
+            btnClass = "h-8 w-8 sm:h-9 sm:w-9 mx-auto rounded-full flex items-center justify-center text-xs font-bold bg-[#C5A880] text-white shadow-sm";
           } else if (selectedCheckinDate && selectedCheckoutDate && dayStr > selectedCheckinDate && dayStr < selectedCheckoutDate) {
-            btnClass = "h-9 w-9 mx-auto rounded-full flex items-center justify-center text-xs bg-[#C5A880]/20 text-[#2C2825]";
+            btnClass = "h-8 w-8 sm:h-9 sm:w-9 mx-auto rounded-full flex items-center justify-center text-xs bg-[#C5A880]/20 text-[#2C2825]";
           }
         }
 
@@ -687,7 +760,10 @@
       }
     }
 
-    window.onload = fetchBookedDates;
+    window.onload = () => {
+      renderGallery();
+      fetchBookedDates();
+    };
   </script>
 </body>
 </html>
