@@ -325,10 +325,15 @@
         const data = await res.json();
         if (data && data.booked) {
           data.booked.forEach(range => {
-            let curr = new Date(range.start);
-            let end = new Date(range.end);
+            // Parse YYYY-MM-DD safely as local year, month, day
+            const [sYear, sMonth, sDay] = range.start.split('-').map(Number);
+            const [eYear, eMonth, eDay] = range.end.split('-').map(Number);
+            
+            let curr = new Date(sYear, sMonth - 1, sDay);
+            let end = new Date(eYear, eMonth - 1, eDay);
+            
             while (curr < end) {
-              bookedDatesSet.add(curr.toISOString().split('T')[0]);
+              bookedDatesSet.add(formatLocalDate(curr));
               curr.setDate(curr.getDate() + 1);
             }
           });
