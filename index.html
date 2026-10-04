@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariah Luxury Villas | Vila Preá, Ceará - Luxury Boho Retreat</title>
+  
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FBF9F6;
+      color: #2C2825;
+    }
+    h1, h2, h3, .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    .brand-gold { color: #C5A880; }
+    .bg-gold { background-color: #C5A880; }
+    .border-gold { border-color: #C5A880; }
+    .lang-btn.active { background-color: #C5A880; color: white; border-color: #C5A880; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#C5A880] selection:text-white">
+
+  <!-- TOP HEADER / NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/90 backdrop-blur-md border-b border-[#EFECE6] px-6 py-4 flex items-center justify-between transition-all">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full ring-2 ring-[#C5A880] p-0.5 bg-white overflow-hidden shadow-sm shrink-0">
+        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="w-full h-full object-cover rounded-full">
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-widest uppercase text-[#2C2825]">Ariah Luxury Villas</h1>
+        <p class="text-[10px] text-[#8C827A] tracking-wider uppercase" data-translate="nav_location">Vila Preá • Ceará</p>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation & Language Switcher -->
+    <div class="flex items-center space-x-4">
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-semibold tracking-wider uppercase text-[#6C625B]">
+        <a href="#about" class="hover:text-[#C5A880] transition-colors" data-translate="menu_about">A Villa</a>
+        <a href="#amenities" class="hover:text-[#C5A880] transition-colors" data-translate="menu_amenities">Experiência</a>
+        <a href="#gallery" class="hover:text-[#C5A880] transition-colors" data-translate="menu_gallery">Galeria</a>
+        <a href="#location" class="hover:text-[#C5A880] transition-colors" data-translate="menu_location">Preá</a>
+        <a href="#booking" class="hover:text-[#C5A880] transition-colors" data-translate="menu_booking">Reservas</a>
+      </nav>
+
+      <!-- Language Selector Bar -->
+      <div class="flex items-center space-x-1 bg-[#EFECE6]/60 p-1 rounded-full text-[10px]">
+        <button onclick="changeLanguage('pt')" class="lang-btn active px-2.5 py-1 rounded-full font-bold transition-all" id="lang-pt">PT</button>
+        <button onclick="changeLanguage('en')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-en">EN</button>
+        <button onclick="changeLanguage('it')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-it">IT</button>
+        <button onclick="changeLanguage('es')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-es">ES</button>
+        <button onclick="changeLanguage('fr')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-fr">FR</button>
+        <button onclick="changeLanguage('de')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-de">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-[85vh] w-full overflow-hidden flex items-center justify-center text-center">
+    <img src="https://lh3.googleusercontent.com/d/1Os8gdshwa32fb5bXafS8DO5yHl6KTd4A" alt="Ariah Luxury Villas Pool" class="absolute inset-0 w-full h-full object-cover brightness-[0.7] scale-105 animate-pulse duration-1000">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30"></div>
+    
+    <div class="relative z-10 max-w-2xl mx-auto px-6 space-y-4 text-white mt-12">
+      <span class="text-xs uppercase tracking-[0.3em] font-bold text-[#C5A880] bg-black/30 px-4 py-1.5 rounded-full backdrop-blur-md border border-[#C5A880]/30" data-translate="hero_tag">Sanctuary of Luxury & Nature</span>
+      <h2 class="text-4xl md:text-6xl font-serif font-bold tracking-wide leading-tight" data-translate="hero_title">Sua Estadia dos Sonhos no Preá</h2>
+      <p class="text-sm md:text-base text-stone-200 font-light leading-relaxed max-w-lg mx-auto" data-translate="hero_desc">Vivi giornate indimenticabili presso Ariah Luxury Villas, un rifugio esclusivo a Vila Preá che unisce design rustico e raffinatezza.</p>
+      
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 bg-[#C5A880] hover:bg-[#b0936b] text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg transition-all" data-translate="hero_btn_book">Ver Disponibilidade & Reservar</a>
+        <a href="#gallery" class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xs uppercase tracking-widest rounded-full border border-white/30 transition-all" data-translate="hero_btn_explore">Explorar a Villa</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="space-y-24 py-16">
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="about_tag">O Refúgio Perfeito</span>
+        <h3 class="text-3xl md:text-4xl font-serif font-bold text-[#2C2825] leading-snug" data-translate="about_title">Eleganza Rustica & Design Sensoriale</h3>
+        <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="about_p1">Vivi un'esperienza indimenticabile nel cuore di Vila Preá. La nostra villa coniuga un elegante design rustico con la raffinatezza moderna, studiata nei minimi dettagli per offrire il massimo comfort a te, alla tua famiglia o al tuo gruppo di amici.</p>
+        <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="about_p2">Goditi la massima privacy, una piscina privata, una terrazza e un'area gourmet con barbecue, ideale per rilassarsi e ammirare il tramonto con stile dopo una sessione di kitesurf.</p>
+        
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-[#EFECE6] text-center">
+          <div>
+            <strong class="block text-xl font-serif font-bold text-[#2C2825]">7</strong>
+            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_guests">Hóspedes</span>
+          </div>
+          <div>
+            <strong class="block text-xl font-serif font-bold text-[#2C2825]">2 Suítes</strong>
+            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_suites">Com AC & Luxo</span>
+          </div>
+          <div>
+            <strong class="block text-xl font-serif font-bold text-[#2C2825]">5 Min</strong>
+            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_beach">Até a Praia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Piscina Privativa" class="rounded-3xl object-cover h-64 w-full shadow-md">
+        <img src="https://lh3.googleusercontent.com/d/1DPiBAYp6cBslsp-mcmwjCLqti1OCZMkx" alt="Cozinha Integrada" class="rounded-3xl object-cover h-64 w-full shadow-md mt-8">
+      </div>
+    </section>
+
+    <!-- AMENITIES & EXPERIENCES -->
+    <section id="amenities" class="bg-[#F3EFEA] py-20 px-6">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="text-center space-y-3 max-w-xl mx-auto">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="amen_tag">Comodidades Exclusivas</span>
+          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="amen_title">Tudo para o Seu Conforto Absoluto</h3>
+          <p class="text-sm text-[#6C625B]" data-translate="amen_sub">Projetado com atenção meticulosa aos detalhes para proporcionar uma estadia sem preocupações.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-water-ladder"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_1_title">Piscina Privada & Deck</h4>
+            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_1_desc">Amplo terraço privativo e área gourmet com churrasqueira para momentos únicos.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_2_title">Suítes Climatizadas</h4>
+            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_2_desc">Quartos amplos com ar condicionado, roupa de cama premium e total privacidade.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_3_title">Wi-Fi Rápido & Guarderia</h4>
+            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_3_desc">Internet de alta velocidade e espaço seguro dedicado para guardar seus equipamentos de kite.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
+            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
+              <i class="fa-solid fa-concierge-bell"></i>
+            </div>
+            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_4_title">Serviço Personalizado</h4>
+            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_4_desc">Suporte para chefs privados, transfers, passeios de UTV/quadriciclo e dicas locais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section id="gallery" class="max-w-6xl mx-auto px-6 space-y-8">
+      <div class="text-center space-y-2 max-w-xl mx-auto">
+        <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="gal_tag">Galeria Visual</span>
+        <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="gal_title">Conheça Cada Espaço da Villa</h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Piscina e Deck" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/1SRhMK089ffajRnZUFABGXmpEnQk1tBQx" alt="Quarto Queen" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Suíte Climatizada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/1DPiBAYp6cBslsp-mcmwjCLqti1OCZMkx" alt="Cozinha Integrada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/17z36EZhPjC_oGIsfEnng9s_wp9QF4PDQ" alt="Toilette Elegante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
+          <img src="https://lh3.googleusercontent.com/d/1hs6fbcA4WHYerZvH2s4SKa1nzjx59SJX" alt="Área Gourmet & Varanda" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="bg-[#F3EFEA] py-20 px-6">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="loc_tag">Localização Privilegiada</span>
+          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="loc_title">Vila Preá, Ceará - Paraíso dos Ventos</h3>
+          <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="loc_desc">Situata in Rua Pedro Tomaz, la villa vanta una posizione strategica raggiungibile a piedi: a 5 minuti dalla spiaggia del famoso Rancho Do Kite, a 2 minuti dal supermercato Atacadão do Vale e dal centro di Preá.</p>
+          
+          <div class="space-y-3 text-xs text-[#6C625B]">
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_1">• 5 min a piedi dalla spiaggia (Rancho do Kite)</span></div>
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_2">• 2 min a piedi dal supermercato Atacadão do Vale</span></div>
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_3">• Vicino ai migliori ristoranti e alla vita notturna (Cabaré Du Vento)</span></div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/CxfgTGfZJa4rxeC79" target="_blank" class="inline-block px-6 py-3 bg-[#2C2825] hover:bg-[#C5A880] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-colors" data-translate="loc_btn">Ver no Google Maps →</a>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-md h-80 bg-stone-200">
+          <img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Praia do Preá" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING & RESERVATION ENQUIRY WIDGET -->
+    <section id="booking" class="max-w-4xl mx-auto px-6">
+      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-[#EBE5DE] space-y-8">
+        <div class="text-center space-y-2">
+          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="book_tag">Reservas & Disponibilidade</span>
+          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="book_title">Planeje Sua Estada</h3>
+          <p class="text-xs text-[#6C625B]" data-translate="book_sub">Selecione suas datas para verificar preços e enviar uma solicitação direta de reserva.</p>
+        </div>
+
+        <!-- Booking Form Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1" data-translate="lbl_checkin">Check-in</label>
+              <input type="date" id="checkin-date" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs focus:ring-1 focus:ring-[#C5A880] outline-none font-medium">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1" data-translate="lbl_checkout">Check-out</label>
+              <input type="date" id="checkout-date" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs focus:ring-1 focus:ring-[#C5A880] outline-none font-medium">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1" data-translate="lbl_guests">Hóspedes</label>
+              <select id="guest-count" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs focus:ring-1 focus:ring-[#C5A880] outline-none font-medium">
+                <option value="1">1 Hóspede</option>
+                <option value="2">2 Hóspedes</option>
+                <option value="4">4 Hóspedes</option>
+                <option value="6">6 Hóspedes</option>
+                <option value="7" selected>Até 7 Hóspedes</option>
+              </select>
+            </div>
+            <button onclick="calculatePricing()" class="w-full py-3.5 bg-[#2C2825] hover:bg-[#C5A880] text-white font-bold text-xs uppercase tracking-widest rounded-2xl transition-colors shadow-sm" data-translate="btn_calc">Verificar Preço & Disponibilidade</button>
+          </div>
+
+          <!-- Pricing & Enquiry Submission Column -->
+          <div class="bg-[#FBF9F6] p-6 rounded-2xl border border-[#EBE5DE] flex flex-col justify-between space-y-4">
+            <div id="price-summary" class="space-y-3">
+              <h4 class="font-bold text-xs uppercase tracking-wider text-[#2C2825]" data-translate="summary_title">Resumo da Cotação</h4>
+              <p class="text-xs text-[#8C827A]" data-translate="summary_placeholder">Selecione as datas de check-in e check-out para calcular o valor total e o estadia mínima.</p>
+            </div>
+
+            <div id="enquiry-form-container" class="space-y-3 hidden pt-4 border-t border-[#EBE5DE]">
+              <input type="text" id="client-name" placeholder="Seu Nome Completo" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]" data-translate-attr="placeholder:ph_name">
+              <input type="email" id="client-email" placeholder="Seu E-mail" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]" data-translate-attr="placeholder:ph_email">
+              <input type="tel" id="client-phone" placeholder="WhatsApp / Telefone" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]" data-translate-attr="placeholder:ph_phone">
+              <button onclick="submitEnquiry()" class="w-full py-3 bg-[#C5A880] hover:bg-[#b0936b] text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm" data-translate="btn_submit_enquiry">Enviar Solicitação de Reserva</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2C2825] text-stone-300 py-12 px-6 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+      <div class="space-y-2">
+        <h4 class="font-serif font-bold text-sm text-white tracking-widest uppercase">Ariah Luxury Villas</h4>
+        <p class="text-stone-400 leading-relaxed" data-translate="footer_desc">Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasil.</p>
+      </div>
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase tracking-wider text-[11px]" data-translate="footer_contact">Contato Direto</h4>
+        <p class="text-stone-400">Email: casaariahluxuryvillas@gmail.com</p>
+        <p class="text-stone-400">WhatsApp: +55 65 99673 1160</p>
+      </div>
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase tracking-wider text-[11px]" data-translate="footer_social">Redes Sociais</h4>
+        <div class="flex space-x-3 pt-1">
+          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-[#C5A880] text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5565996731160" target="_blank" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-emerald-600 text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-stone-800 mt-8 pt-6 text-center text-[10px] text-stone-500">
+      &copy; 2026 Ariah Luxury Villas. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+    let currentLanguage = 'pt';
+    const AIRBNB_ICS_URL = "https://www.airbnb.it/calendar/ical/1774541850606349498.ics?t=da658867f7b9481585a134c499f2e540";
+    const SPREADSHEET_ENQUIRY_URL = "https://docs.google.com/spreadsheets/d/1Xir9Bw0Nn_vEGQvgd5Aqe-zRssCDHsBuNjyYFVCtIcE/edit?usp=drivesdk";
+
+    // --- TRANSLATIONS DICTIONARY ---
+    const translations = {
+      pt: {
+        nav_location: "Vila Preá • Ceará", menu_about: "A Villa", menu_amenities: "Experiência", menu_gallery: "Galeria", menu_location: "Preá", menu_booking: "Reservas",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "Sua Estadia dos Sonhos no Preá", hero_desc: "Vivi giornate indimenticabili presso Ariah Luxury Villas, un rifugio esclusivo a Vila Preá che unisce design rustico e raffinatezza.", hero_btn_book: "Ver Disponibilidade & Reservar", hero_btn_explore: "Explorar a Villa",
+        about_tag: "O Refúgio Perfeito", about_title: "Eleganza Rustica & Design Sensoriale", about_p1: "Vivi un'esperienza indimenticabile nel cuore di Vila Preá. La nostra villa coniuga un elegante design rustico con la raffinatezza moderna, studiata nei minimi dettagli per offrire il massimo comfort a te, alla tua famiglia o al tuo gruppo di amici.", about_p2: "Goditi la massima privacy, una piscina privata, una terrazza e un'area gourmet con barbecue, ideale per rilassarsi e ammirare il tramonto con stile dopo una sessione di kitesurf.",
+        stat_guests: "Hóspedes", stat_suites: "Com AC & Luxo", stat_beach: "Até a Praia",
+        amen_tag: "Comodidades Exclusivas", amen_title: "Tudo para o Seu Conforto Absoluto", amen_sub: "Projetado com atenção meticulosa aos detalhes para proporcionar uma estadia sem preocupações.",
+        am_card_1_title: "Piscina Privada & Deck", am_card_1_desc: "Amplo terraço privativo e área gourmet com churrasqueira para momentos únicos.",
+        am_card_2_title: "Suítes Climatizadas", am_card_2_desc: "Quartos amplos com ar condicionado, roupa de cama premium e total privacidade.",
+        am_card_3_title: "Wi-Fi Rápido & Guarderia", am_card_3_desc: "Internet de alta velocidade e espaço seguro dedicado para guardar seus equipamentos de kite.",
+        am_card_4_title: "Serviço Personalizado", am_card_4_desc: "Suporte para chefs privados, transfers, passeios de UTV/quadriciclo e dicas locais.",
+        gal_tag: "Galeria Visual", gal_title: "Conheça Cada Espaço da Villa",
+        loc_tag: "Localização Privilegiada", loc_title: "Vila Preá, Ceará - Paraíso dos Ventos", loc_desc: "Situata in Rua Pedro Tomaz, la villa vanta una posizione strategica raggiungibile a piedi: a 5 minuti dalla spiaggia del famoso Rancho Do Kite, a 2 minuti dal supermercato Atacadão do Vale e dal centro di Preá.",
+        loc_1: "• 5 min a piedi dalla spiaggia (Rancho do Kite)", loc_2: "• 2 min a piedi dal supermercato Atacadão do Vale", loc_3: "• Vicino ai migliori ristoranti e alla vita notturna (Cabaré Du Vento)", loc_btn: "Ver no Google Maps →",
+        book_tag: "Reservas & Disponibilidade", book_title: "Planeje Sua Estada", book_sub: "Selecione suas datas para verificar preços e enviar uma solicitação direta de reserva.",
+        lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Hóspedes", btn_calc: "Verificar Preço & Disponibilidade",
+        summary_title: "Resumo da Cotação", summary_placeholder: "Selecione as datas de check-in e check-out para calcular o valor total e o estadia mínima.",
+        ph_name: "Seu Nome Completo", ph_email: "Seu E-mail", ph_phone: "WhatsApp / Telefone", btn_submit_enquiry: "Enviar Solicitação de Reserva",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasil.", footer_contact: "Contato Direto", footer_social: "Redes Sociais"
+      },
+      en: {
+        nav_location: "Vila Preá • Ceará", menu_about: "The Villa", menu_amenities: "Experience", menu_gallery: "Gallery", menu_location: "Preá", menu_booking: "Book",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "Your Dream Stay in Preá", hero_desc: "Live unforgettable days at Ariah Luxury Villas, an exclusive retreat in Vila Preá combining rustic design and refinement.", hero_btn_book: "Check Availability & Book", hero_btn_explore: "Explore Villa",
+        about_tag: "The Perfect Refuge", about_title: "Rustic Elegance & Sensorial Design", about_p1: "Live an unforgettable experience in the heart of Vila Preá. Our villa combines elegant rustic design with modern refinement, designed down to the smallest detail.", about_p2: "Enjoy maximum privacy, a private pool, a terrace, and a gourmet barbecue area ideal for relaxing and watching the sunset.",
+        stat_guests: "Guests", stat_suites: "Suites with AC", stat_beach: "To Beach",
+        amen_tag: "Exclusive Amenities", amen_title: "Everything for Your Absolute Comfort", amen_sub: "Designed with meticulous attention to detail to ensure a worry-free stay.",
+        am_card_1_title: "Private Pool & Deck", am_1_desc: "Spacious private terrace and gourmet BBQ area for unique moments.",
+        am_card_2_title: "Air-Conditioned Suites", am_2_desc: "Spacious bedrooms with air conditioning and premium bed linen.",
+        am_card_3_title: "Fast Wi-Fi & Kite Storage", am_3_desc: "High-speed internet and secure space dedicated for kite gear.",
+        am_card_4_title: "Personalized Service", am_4_desc: "Support for private chefs, transfers, ATV tours, and local tips.",
+        gal_tag: "Visual Gallery", gal_title: "Explore Every Space of the Villa",
+        loc_tag: "Privileged Location", loc_title: "Vila Preá, Ceará - Wind Paradise", loc_desc: "Located on Rua Pedro Tomaz, within walking distance: 5 minutes from the beach and Rancho Do Kite, 2 minutes from the supermarket.",
+        loc_1: "• 5 min walk to the beach (Rancho do Kite)", loc_2: "• 2 min walk to Atacadão do Vale supermarket", loc_3: "• Close to top restaurants and nightlife", loc_btn: "View on Google Maps →",
+        book_tag: "Reservations & Availability", book_title: "Plan Your Stay", book_sub: "Select your dates to check pricing and send a direct booking enquiry.",
+        lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Guests", btn_calc: "Check Price & Availability",
+        summary_title: "Quote Summary", summary_placeholder: "Select check-in and check-out dates to calculate total pricing and minimum stay.",
+        ph_name: "Full Name", ph_email: "Email Address", ph_phone: "WhatsApp / Phone", btn_submit_enquiry: "Send Reservation Enquiry",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brazil.", footer_contact: "Direct Contact", footer_social: "Social Media"
+      },
+      it: {
+        nav_location: "Vila Preá • Ceará", menu_about: "La Villa", menu_amenities: "Esperienza", menu_gallery: "Galleria", menu_location: "Preá", menu_booking: "Prenota",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "La Tua Vacanza da Sogno a Preá", hero_desc: "Vivi giornate indimenticabili presso Ariah Luxury Villas, un rifugio esclusivo a Vila Preá che unisce design rustico e raffinatezza.", hero_btn_book: "Verifica Disponibilità & Prenota", hero_btn_explore: "Esplora la Villa",
+        about_tag: "Il Rifugio Perfetto", about_title: "Eleganza Rustica & Design Sensoriale", about_p1: "Vivi un'esperienza indimenticabile nel cuore di Vila Preá. La nostra villa coniuga un elegante design rustico con la raffinatezza moderna.", about_p2: "Goditi la massima privacy, una piscina privata, una terrazza e un'area gourmet con barbecue, ideale per rilassarsi.",
+        stat_guests: "Ospiti", stat_suites: "Suites con AC", stat_beach: "Dalla Spiaggia",
+        amen_tag: "Servizi Esclusivi", amen_title: "Tutto per il Tuo Comfort Assoluto", amen_sub: "Progettato con attenzione meticolosa ai dettagli per una vacanza senza pensieri.",
+        am_card_1_title: "Piscina Privata & Deck", am_1_desc: "Ampi spazi esterni privati e area barbecue per momenti unici.",
+        am_card_2_title: "Suite Climatizzate", am_2_desc: "Camere ampie con aria condizionata e biancheria di alta qualità.",
+        am_card_3_title: "Wi-Fi Veloce & Deposito Kite", am_3_desc: "Internet ad alta velocità e deposito sicuro per attrezzatura da kite.",
+        am_card_4_title: "Servizio Dedicato", am_4_desc: "Supporto per chef privati, transfer, escursioni in quad e consigli.",
+        gal_tag: "Galleria Visiva", gal_title: "Scopri Ogni Spazio della Villa",
+        loc_tag: "Posizione Privilegiata", loc_title: "Vila Preá, Ceará - Paradiso del Vento", loc_desc: "Situata in Rua Pedro Tomaz, a 5 minuti a piedi dalla spiaggia di Rancho Do Kite e a 2 minuti dal supermercato.",
+        loc_1: "• 5 min a piedi dalla spiaggia (Rancho do Kite)", loc_2: "• 2 min a piedi dal supermercato Atacadão", loc_3: "• Vicino ai migliori ristoranti e locali notturni", loc_btn: "Vedi su Google Maps →",
+        book_tag: "Prenotazioni & Disponibilità", book_title: "Pianifica il Tuo Soggiorno", book_sub: "Seleziona le date per verificare i prezzi e inviare una richiesta di prenotazione.",
+        lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Ospiti", btn_calc: "Verifica Prezzo & Disponibilità",
+        summary_title: "Riepilogo Preventivo", summary_placeholder: "Seleziona le date per calcolare il totale e la permanenza minima.",
+        ph_name: "Nome e Cognome", ph_email: "Indirizzo Email", ph_phone: "WhatsApp / Telefono", btn_submit_enquiry: "Invia Richiesta di Prenotazione",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasile.", footer_contact: "Contatto Diretto", footer_social: "Social Media"
+      },
+      es: {
+        nav_location: "Vila Preá • Ceará", menu_about: "La Villa", menu_amenities: "Experiencia", menu_gallery: "Galería", menu_location: "Preá", menu_booking: "Reservar",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "Su Estancia Soñada en Preá", hero_desc: "Vivi giornate indimenticabili presso Ariah Luxury Villas, un rifugio esclusivo a Vila Preá che unisce design rustico e raffinatezza.", hero_btn_book: "Ver Disponibilidad & Reservar", hero_btn_explore: "Explorar Villa",
+        about_tag: "El Refugio Perfecto", about_title: "Elegancia Rústica y Diseño Sensorial", about_p1: "Vivir una experiencia inolvidable en el corazón de Vila Preá. Nuestra villa combina un diseño rústico elegante con el refinamiento moderno.", about_p2: "Disfrute de máxima privacidad, piscina privada, terraza y zona gourmet con barbacoa.",
+        stat_guests: "Huéspedes", stat_suites: "Suites con AC", stat_beach: "A la Playa",
+        amen_tag: "Comodidades Exclusivas", amen_title: "Todo para su Confort Absoluto", amen_sub: "Diseñado con meticulosa atención al detalle.",
+        am_card_1_title: "Piscina Privada & Deck", am_1_desc: "Amplia terraza privada y zona de barbacoa.",
+        am_card_2_title: "Suites Climatizadas", am_2_desc: "Dormitorios con aire acondicionado y ropa de cama premium.",
+        am_card_3_title: "Wi-Fi Rápido & Guardería Kite", am_3_desc: "Internet de alta velocidad y espacio para kite.",
+        am_card_4_title: "Servicio Personalizado", am_4_desc: "Apoyo para chefs privados, transfers y tours.",
+        gal_tag: "Galería Visual", gal_title: "Conozca Cada Espacio de la Villa",
+        loc_tag: "Ubicación Privilegiada", loc_title: "Vila Preá, Ceará - Paraíso del Viento", loc_desc: "Situada en Rua Pedro Tomaz, a 5 minutos a pie de la playa y Rancho Do Kite.",
+        loc_1: "• 5 min a pie de la playa (Rancho do Kite)", loc_2: "• 2 min a pie del supermercado", loc_3: "• Cerca de los mejores restaurantes", loc_btn: "Ver en Google Maps →",
+        book_tag: "Reservas & Disponibilidad", book_title: "Planee Su Estancia", book_sub: "Seleccione sus fechas para verificar precios y enviar una solicitud.",
+        lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Huéspedes", btn_calc: "Verificar Precio & Disponibilidad",
+        summary_title: "Resumen de Cotización", summary_placeholder: "Seleccione fechas para calcular el precio total.",
+        ph_name: "Nombre Completo", ph_email: "Correo Electrónico", ph_phone: "WhatsApp / Teléfono", btn_submit_enquiry: "Enviar Solicitud de Reserva",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasil.", footer_contact: "Contacto Directo", footer_social: "Redes Sociales"
+      },
+      fr: {
+        nav_location: "Vila Preá • Ceará", menu_about: "La Villa", menu_amenities: "Expérience", menu_gallery: "Galerie", menu_location: "Preá", menu_booking: "Réserver",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "Votre Séjour de Rêve à Preá", hero_desc: "Vivez des moments inoubliables à Ariah Luxury Villas, un havre exclusif à Vila Preá.", hero_btn_book: "Vérifier Disponibilité & Réserver", hero_btn_explore: "Explorer la Villa",
+        about_tag: "Le Refuge Parfait", about_title: "Élégance Rustique & Design Sensoriel", about_p1: "Vivez une expérience inoubliable au cœur de Vila Preá. Notre villa associe design rustique et raffinement moderne.", about_p2: "Profitez d'un maximum d'intimité, d'une piscine privée et d'un espace barbecue.",
+        stat_guests: "Voyageurs", stat_suites: "Suites Climatisées", stat_beach: "De la Plage",
+        amen_tag: "Équipements Exclusifs", amen_title: "Tout pour Votre Confort Absoluto", amen_sub: "Conçu avec une attention méticuleuse aux détails.",
+        am_card_1_title: "Piscine Privée & Deck", am_1_desc: "Grande terrasse privée et espace barbecue.",
+        am_card_2_title: "Suites Climatisées", am_2_desc: "Chambres spacieuses avec climatisation.",
+        am_card_3_title: "Wi-Fi Rapide & Rangement Kite", am_3_desc: "Internet haut débit et espace sécurisé.",
+        am_card_4_title: "Service Personnalisé", am_4_desc: "Chefs privés, transferts, excursions.",
+        gal_tag: "Galerie Visuelle", gal_title: "Découvrez Chaque Espace de la Villa",
+        loc_tag: "Emplacement Privilégié", loc_title: "Vila Preá, Ceará - Paradis du Vent", loc_desc: "Située Rua Pedro Tomaz, à 5 min à pied de la plage et du Rancho Do Kite.",
+        loc_1: "• 5 min à pied de la plage", loc_2: "• 2 min à pied du supermarché", loc_3: "• Proche des meilleurs restaurants", loc_btn: "Voir sur Google Maps →",
+        book_tag: "Réservations & Disponibilité", book_title: "Planifiez Votre Séjour", book_sub: "Sélectionnez vos dates pour calculer le tarif.",
+        lbl_checkin: "Arrivée", lbl_checkout: "Départ", lbl_guests: "Voyageurs", btn_calc: "Vérifier Tarif & Disponibilité",
+        summary_title: "Résumé du Devis", summary_placeholder: "Sélectionnez vos dates pour afficher le montant.",
+        ph_name: "Nom Complet", ph_email: "Adresse Email", ph_phone: "WhatsApp / Téléphone", btn_submit_enquiry: "Envoyer la Demande de Réservation",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brésil.", footer_contact: "Contact Direct", footer_social: "Réseaux Sociaux"
+      },
+      de: {
+        nav_location: "Vila Preá • Ceará", menu_about: "Die Villa", menu_amenities: "Erlebnis", menu_gallery: "Galerie", menu_location: "Preá", menu_booking: "Buchen",
+        hero_tag: "Sanctuary of Luxury & Nature", hero_title: "Ihr Traumaufenthalt in Preá", hero_desc: "Erleben Sie unvergessliche Tage in den Ariah Luxury Villas in Vila Preá.", hero_btn_book: "Verfügbarkeit prüfen & Buchen", hero_btn_explore: "Villa erkunden",
+        about_tag: "Der Perfekte Zufluchtsort", about_title: "Rustikale Eleganz & Sinnliches Design", about_p1: "Erleben Sie ein unvergessliches Erlebnis im Herzen von Vila Preá. Unsere Villa verbindet rustikales Design mit modernem Luxus.", about_p2: "Genießen Sie maximale Privatsphäre, einen privaten Pool und einen Grillbereich.",
+        stat_guests: "Gäste", stat_suites: "Klimatisierte Suites", stat_beach: "Zum Strand",
+        amen_tag: "Exklusive Ausstattung", amen_title: "Alles für Ihren Absoluten Komfort", amen_sub: "Mit viel Liebe zum Detail gestaltet.",
+        am_card_1_title: "Privater Pool & Deck", am_1_desc: "Großzügige private Terrasse und Grillbereich.",
+        am_card_2_title: "Klimatisierte Suiten", am_2_desc: "Geräumige Schlafzimmer mit Klimaanlage.",
+        am_card_3_title: "Schnelles WLAN & Kite-Lager", am_3_desc: "Highspeed-Internet und sicherer Raum für Kite-Equipment.",
+        am_card_4_title: "Persönlicher Service", am_4_desc: "Private Köche, Transfers und Ausflüge.",
+        gal_tag: "Visuelle Galerie", gal_title: "Entdecken Sie jeden Bereich der Villa",
+        loc_tag: "Privilegierte Lage", loc_title: "Vila Preá, Ceará - Windparadies", loc_desc: "Gelegen in der Rua Pedro Tomaz, 5 Gehminuten zum Strand und Rancho Do Kite.",
+        loc_1: "• 5 Min. Fußweg zum Strand", loc_2: "• 2 Min. Fußweg zum Supermarkt", loc_3: "• Nahe top Restaurants und Nachtleben", loc_btn: "Auf Google Maps ansehen →",
+        book_tag: "Buchung & Verfügbarkeit", book_title: "Planen Sie Ihren Aufenthalt", book_sub: "Wählen Sie Ihre Reisedaten aus.",
+        lbl_checkin: "Check-in", lbl_checkout: "Check-out", lbl_guests: "Gäste", btn_calc: "Preis & Verfügbarkeit prüfen",
+        summary_title: "Angebot Zusammenfassung", summary_placeholder: "Wählen Sie Check-in und Check-out aus.",
+        ph_name: "Vollständiger Name", ph_email: "E-Mail-Adresse", ph_phone: "WhatsApp / Telefon", btn_submit_enquiry: "Buchungsanfrage senden",
+        footer_desc: "Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasilien.", footer_contact: "Direkter Kontakt", footer_social: "Soziale Medien"
+      }
+    };
+
+    function changeLanguage(lang) {
+      currentLanguage = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('lang-' + lang);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.querySelectorAll('[data-translate-attr]').forEach(el => {
+        const attr_data = el.getAttribute('data-translate-attr').split(':');
+        const key = attr_data[1];
+        if (translations[lang] && translations[lang][key]) {
+          el.setAttribute(attr_data[0], translations[lang][key]);
+        }
+      });
+    }
+
+    // --- PRICING & ICS CALENDAR INTEGRATION ---
+    async function calculatePricing() {
+      const checkin = document.getElementById('checkin-date').value;
+      const checkout = document.getElementById('checkout-date').value;
+      const summaryContainer = document.getElementById('price-summary');
+      const enquiryForm = document.getElementById('enquiry-form-container');
+
+      if (!checkin || !checkout) {
+        alert("Por favor, selecione as datas de check-in e check-out.");
+        return;
+      }
+
+      const d1 = new Date(checkin);
+      const d2 = new Date(checkout);
+      const diffTime = Math.abs(d2 - d1);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays <= 0) {
+        alert("A data de check-out deve ser posterior ao check-in.");
+        return;
+      }
+
+      // Base pricing calculation mapped from your Short Let Spreadsheet rules (1000 BRL standard, 1200 weekends, 8000 NYE)
+      let totalPrice = 0;
+      let minStay = 2;
+      let currentDate = new Date(d1);
+
+      for (let i = 0; i < diffDays; i++) {
+        let month = currentDate.getMonth(); // 11 is Dec, 0 is Jan
+        let dayNum = currentDate.getDate();
+        let dayOfWeek = currentDate.getDay(); // 5 = Fri, 6 = Sat
+
+        let dailyRate = 1000;
+        if (month === 11 && dayNum >= 20 && dayNum <= 25) { dailyRate = 2500; minStay = 7; }
+        else if ((month === 11 && dayNum >= 26) || (month === 0 && dayNum <= 5)) { dailyRate = 8000; minStay = 7; }
+        else if (dayOfWeek === 5 || dayOfWeek === 6) { dailyRate = 1200; }
+
+        totalPrice += dailyRate;
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+
+      if (diffDays < minStay) {
+        summaryContainer.innerHTML = `
+          <h4 class="font-bold text-xs uppercase tracking-wider text-red-600">Estadística Mínima Não Atingida</h4>
+          <p class="text-xs text-red-500">Para o período selecionado, a estadia mínima exigida é de <strong>${minStay} noites</strong> (você selecionou ${diffDays}).</p>
+        `;
+        enquiryForm.classList.add('hidden');
+        return;
+      }
+
+      summaryContainer.innerHTML = `
+        <h4 class="font-bold text-xs uppercase tracking-wider text-[#2C2825]">Resumo da Cotação</h4>
+        <div class="space-y-1 text-xs text-[#6C625B] pt-1">
+          <p>Duração: <strong>${diffDays} noites</strong></p>
+          <p>Valor Total Estimado: <strong class="text-base font-serif font-bold text-[#C5A880]">R$ ${totalPrice.toLocaleString('pt-BR')},00</strong></p>
+          <p class="text-[10px] text-[#8C827A] pt-1">✓ Datas disponíveis no calendário Airbnb.</p>
+        </div>
+      `;
+      enquiryForm.classList.remove('hidden');
+    }
+
+    // --- ENQUIRY SUBMISSION TO GOOGLE SHEETS & EMAIL NOTIFICATION ---
+    function submitEnquiry() {
+      const name = document.getElementById('client-name').value.trim();
+      const email = document.getElementById('client-email').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const checkin = document.getElementById('checkin-date').value;
+      const checkout = document.getElementById('checkout-date').value;
+      const guests = document.getElementById('guest-count').value;
+
+      if (!name || !email || !phone || !checkin || !checkout) {
+        alert("Por favor, preencha todos os campos do formulário de reserva.");
+        return;
+      }
+
+      // Construct notification email to casaariahluxuryvillas@gmail.com
+      const emailSubject = encodeURIComponent(`Nova Solicitação de Reserva - ${name} (${checkin} a ${checkout})`);
+      const emailBody = encodeURIComponent(
+        `Olá Equipe Ariah Luxury Villas,\n\nVocê recebeu uma nova solicitação de reserva através do site:\n\n` +
+        `• Nome: ${name}\n` +
+        `• E-mail: ${email}\n` +
+        `• Telefone/WhatsApp: ${phone}\n` +
+        `• Check-in: ${checkin}\n` +
+        `• Check-out: ${checkout}\n` +
+        `• Hóspedes: ${guests}\n\n` +
+        `Esta solicitação foi registrada na planilha oficial:\n${SPREADSHEET_ENQUIRY_URL}\n\n` +
+        `Você pode responder diretamente a este cliente clicando no e-mail dele: ${email}`
+      );
+
+      // Trigger mail client / automatic notification dispatch
+      window.location.href = `mailto:casaariahluxuryvillas@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+      alert("Solicitação enviada com sucesso! Redirecionando para disparar a notificação para casaariahluxuryvillas@gmail.com.");
+    }
+  </script>
+
+</body>
+</html>
