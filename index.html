@@ -108,13 +108,15 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
+  <!-- GALLERY & AIRBNB EMBED -->
   <section id="gallery" class="py-24 max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
       <span class="gallery-tag text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Visual Tour</span>
       <h2 class="gallery-title font-serif text-3xl md:text-4xl text-[#2C2825]">Explore the Spaces</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Native Photos Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       <div class="overflow-hidden rounded-2xl shadow-sm">
         <img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Beachfront" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
       </div>
@@ -130,11 +132,14 @@
       <div class="overflow-hidden rounded-2xl shadow-sm">
         <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Bedroom" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
       </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm flex items-center justify-center bg-[#E5DFD5]/40 p-6 rounded-2xl border border-[#E5DFD5] text-center">
-        <div>
-          <p class="text-xs uppercase tracking-widest text-[#8C827A] mb-2 font-semibold">Guest Guide QR Code</p>
-          <img src="https://lh3.googleusercontent.com/d/1eQ04BdgDa3xHTtAf2SbUKtqb7zk-nQfx" alt="QR Code" class="w-32 h-32 mx-auto object-contain">
-        </div>
+    </div>
+
+    <!-- Airbnb Embedded Widget -->
+    <div class="flex justify-center my-12">
+      <div class="airbnb-embed-frame" data-id="1774541850606349498" data-view="home" data-hide-price="true" style="width:100%;max-width:450px;height:300px;margin:auto">
+        <a href="https://www.airbnb.it/rooms/1774541850606349498?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Visto su Airbnb</a>
+        <a href="https://www.airbnb.it/rooms/1774541850606349498?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Casa · Cruz · ★Novità · 2 camere da letto · 6 letti · 3 bagni</a>
+        <script async="" src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
       </div>
     </div>
   </section>
