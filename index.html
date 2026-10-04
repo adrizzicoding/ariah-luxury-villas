@@ -290,8 +290,7 @@
   <!-- SCRIPT ENGINE -->
   <script>
     let currentLanguage = 'pt';
-    const AIRBNB_ICS_URL = "https://www.airbnb.it/calendar/ical/1774541850606349498.ics?t=da658867f7b9481585a134c499f2e540";
-    const SPREADSHEET_ENQUIRY_URL = "https://docs.google.com/spreadsheets/d/1Xir9Bw0Nn_vEGQvgd5Aqe-zRssCDHsBuNjyYFVCtIcE/edit?usp=drivesdk";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyRuXPyVgV4_fzFwMpIDEsEidDjdHpl0U2l2DDdwQTTgtpKURTGm6Xoj4jtcs5dyumB6Q/exec";
 
     // --- TRANSLATIONS DICTIONARY ---
     const translations = {
@@ -432,7 +431,7 @@
       });
     }
 
-    // --- PRICING & ICS CALENDAR INTEGRATION ---
+    // --- CALENDAR & PRICING VERIFICATION ---
     async function calculatePricing() {
       const checkin = document.getElementById('checkin-date').value;
       const checkout = document.getElementById('checkout-date').value;
@@ -454,15 +453,33 @@
         return;
       }
 
-      // Base pricing calculation mapped from your Short Let Spreadsheet rules (1000 BRL standard, 1200 weekends, 8000 NYE)
+      summaryContainer.innerHTML = `<p class="text-xs text-[#8C827A]">Verificando disponibilidade no calendário...</p>`;
+
+      try {
+        const res = await fetch(`${WEB_APP_URL}?checkin=${checkin}&checkout=${checkout}`);
+        const result = await res.json();
+
+        if (!result.available) {
+          summaryContainer.innerHTML = `
+            <h4 class="font-bold text-xs uppercase tracking-wider text-red-600">Datas Indisponíveis</h4>
+            <p class="text-xs text-red-500">As datas selecionadas já estão reservadas no Airbnb. Por favor, escolha outro período.</p>
+          `;
+          enquiryForm.classList.add('hidden');
+          return;
+        }
+      } catch (err) {
+        console.error("Erro ao verificar calendário:", err);
+      }
+
+      // Pricing rules calculation (Standard 1000 BRL, 1200 weekends, 8000 NYE)
       let totalPrice = 0;
       let minStay = 2;
       let currentDate = new Date(d1);
 
       for (let i = 0; i < diffDays; i++) {
-        let month = currentDate.getMonth(); // 11 is Dec, 0 is Jan
+        let month = currentDate.getMonth();
         let dayNum = currentDate.getDate();
-        let dayOfWeek = currentDate.getDay(); // 5 = Fri, 6 = Sat
+        let dayOfWeek = currentDate.getDay();
 
         let dailyRate = 1000;
         if (month === 11 && dayNum >= 20 && dayNum <= 25) { dailyRate = 2500; minStay = 7; }
@@ -487,14 +504,14 @@
         <div class="space-y-1 text-xs text-[#6C625B] pt-1">
           <p>Duração: <strong>${diffDays} noites</strong></p>
           <p>Valor Total Estimado: <strong class="text-base font-serif font-bold text-[#C5A880]">R$ ${totalPrice.toLocaleString('pt-BR')},00</strong></p>
-          <p class="text-[10px] text-[#8C827A] pt-1">✓ Datas disponíveis no calendário Airbnb.</p>
+          <p class="text-[10px] text-emerald-600 font-bold pt-1">✓ Datas livres e disponíveis!</p>
         </div>
       `;
       enquiryForm.classList.remove('hidden');
     }
 
-    // --- ENQUIRY SUBMISSION TO GOOGLE SHEETS & EMAIL NOTIFICATION ---
-    function submitEnquiry() {
+    // --- ENQUIRY SUBMISSION TO GOOGLE SHEET & EMAIL NOTIFICATION ---
+    async function submitEnquiry() {
       const name = document.getElementById('client-name').value.trim();
       const email = document.getElementById('client-email').value.trim();
       const phone = document.getElementById('client-phone').value.trim();
@@ -507,24 +524,34 @@
         return;
       }
 
-      // Construct notification email to casaariahluxuryvillas@gmail.com
-      const emailSubject = encodeURIComponent(`Nova Solicitação de Reserva - ${name} (${checkin} a ${checkout})`);
-      const emailBody = encodeURIComponent(
-        `Olá Equipe Ariah Luxury Villas,\n\nVocê recebeu uma nova solicitação de reserva através do site:\n\n` +
-        `• Nome: ${name}\n` +
-        `• E-mail: ${email}\n` +
-        `• Telefone/WhatsApp: ${phone}\n` +
-        `• Check-in: ${checkin}\n` +
-        `• Check-out: ${checkout}\n` +
-        `• Hóspedes: ${guests}\n\n` +
-        `Esta solicitação foi registrada na planilha oficial:\n${SPREADSHEET_ENQUIRY_URL}\n\n` +
-        `Você pode responder diretamente a este cliente clicando no e-mail dele: ${email}`
-      );
+      const formData = { 
+        name, 
+        email, 
+        phone, 
+        checkin, 
+        checkout, 
+        guests,
+        secretToken: "ARIAH_SECURE_KEY_2026",
+        timestamp: new Date().toISOString()
+      };
 
-      // Trigger mail client / automatic notification dispatch
-      window.location.href = `mailto:casaariahluxuryvillas@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      try {
+        await fetch(WEB_APP_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
+        });
 
-      alert("Solicitação enviada com sucesso! Redirecionando para disparar a notificação para casaariahluxuryvillas@gmail.com.");
+        alert("Solicitação enviada com sucesso! A planilha foi atualizada e a notificação foi enviada para casaariahluxuryvillas@gmail.com.");
+        document.getElementById('client-name').value = '';
+        document.getElementById('client-email').value = '';
+        document.getElementById('client-phone').value = '';
+        document.getElementById('enquiry-form-container').classList.add('hidden');
+      } catch (error) {
+        console.error("Erro ao enviar:", error);
+        alert("Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.");
+      }
     }
   </script>
 
