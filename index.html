@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ariah Luxury Villas | Vila Preá, Ceará - Luxury Boho Retreat</title>
-  
+  <title>Ariah Luxury Villas | Praia do Preá</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #FBF9F6;
@@ -18,295 +16,124 @@
     h1, h2, h3, .font-serif {
       font-family: 'Playfair Display', serif;
     }
-    .brand-gold { color: #C5A880; }
-    .bg-gold { background-color: #C5A880; }
-    .border-gold { border-color: #C5A880; }
-    .lang-btn.active { background-color: #C5A880; color: white; border-color: #C5A880; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-[#C5A880] selection:text-white">
+<body class="antialiased selection:bg-[#C5A880] selection:text-white">
 
-  <!-- TOP HEADER / NAV -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FBF9F6]/90 backdrop-blur-md border-b border-[#EFECE6] px-6 py-4 flex items-center justify-between transition-all">
-    <div class="flex items-center space-x-3">
-      <div class="w-10 h-10 rounded-full ring-2 ring-[#C5A880] p-0.5 bg-white overflow-hidden shadow-sm shrink-0">
-        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="w-full h-full object-cover rounded-full">
-      </div>
+  <!-- HEADER -->
+  <header class="w-full border-b border-[#EBE5DE] bg-[#FBF9F6]/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
       <div>
-        <h1 class="text-sm font-bold tracking-widest uppercase text-[#2C2825]">Ariah Luxury Villas</h1>
-        <p class="text-[10px] text-[#8C827A] tracking-wider uppercase" data-translate="nav_location">Vila Preá • Ceará</p>
+        <span class="font-serif text-xl tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
+        <span class="block text-[10px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
       </div>
-    </div>
-
-    <div class="flex items-center space-x-4">
-      <nav class="hidden md:flex items-center space-x-6 text-xs font-semibold tracking-wider uppercase text-[#6C625B]">
-        <a href="#about" class="hover:text-[#C5A880] transition-colors" data-translate="menu_about">A Villa</a>
-        <a href="#amenities" class="hover:text-[#C5A880] transition-colors" data-translate="menu_amenities">Experiência</a>
-        <a href="#gallery" class="hover:text-[#C5A880] transition-colors" data-translate="menu_gallery">Galeria</a>
-        <a href="#location" class="hover:text-[#C5A880] transition-colors" data-translate="menu_location">Preá</a>
-        <a href="#booking" class="hover:text-[#C5A880] transition-colors" data-translate="menu_booking">Reservas</a>
-      </nav>
-
-      <!-- Language Selector Bar -->
-      <div class="flex items-center space-x-1 bg-[#EFECE6]/60 p-1 rounded-full text-[10px]">
-        <button onclick="changeLanguage('pt')" class="lang-btn active px-2.5 py-1 rounded-full font-bold transition-all" id="lang-pt">PT</button>
-        <button onclick="changeLanguage('en')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-en">EN</button>
-        <button onclick="changeLanguage('it')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-it">IT</button>
-        <button onclick="changeLanguage('es')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-es">ES</button>
-        <button onclick="changeLanguage('fr')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-fr">FR</button>
-        <button onclick="changeLanguage('de')" class="lang-btn px-2.5 py-1 rounded-full font-bold transition-all text-[#6C625B]" id="lang-de">DE</button>
+      <div class="text-xs uppercase tracking-wider text-[#6C625B] font-medium">
+        Reservation Enquiry
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative h-[85vh] w-full overflow-hidden flex items-center justify-center text-center">
-    <img src="https://lh3.googleusercontent.com/d/1Os8gdshwa32fb5bXafS8DO5yHl6KTd4A" alt="Ariah Luxury Villas Pool" class="absolute inset-0 w-full h-full object-cover brightness-[0.7] scale-105 animate-pulse duration-1000">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30"></div>
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-3xl mx-auto px-6 py-12">
     
-    <div class="relative z-10 max-w-2xl mx-auto px-6 space-y-4 text-white mt-12">
-      <span class="text-xs uppercase tracking-[0.3em] font-bold text-[#C5A880] bg-black/30 px-4 py-1.5 rounded-full backdrop-blur-md border border-[#C5A880]/30" data-translate="hero_tag">Sanctuary of Luxury & Nature</span>
-      <h2 class="text-4xl md:text-6xl font-serif font-bold tracking-wide leading-tight" data-translate="hero_title">Sua Estadia dos Sonhos no Preá</h2>
-      <p class="text-sm md:text-base text-stone-200 font-light leading-relaxed max-w-lg mx-auto" data-translate="hero_desc">Vivi giornate indimenticabili presso Ariah Luxury Villas, un rifugio esclusivo a Vila Preá che unisce design rustico e raffinatezza.</p>
+    <!-- INTRO -->
+    <div class="text-center mb-10">
+      <h1 class="font-serif text-3xl md:text-4xl text-[#2C2825] mb-3">Reserve sua Estadia</h1>
+      <p class="text-sm text-[#6C625B] max-w-md mx-auto">Selecione as datas de check-in e check-out no calendário abaixo para verificar a disponibilidade em tempo real.</p>
+    </div>
+
+    <!-- CALENDAR CARD -->
+    <div class="bg-white border border-[#EBE5DE] rounded-2xl p-6 md:p-8 shadow-sm">
       
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="#booking" class="w-full sm:w-auto px-8 py-3.5 bg-[#C5A880] hover:bg-[#b0936b] text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg transition-all" data-translate="hero_btn_book">Ver Disponibilidade & Reservar</a>
-        <a href="#gallery" class="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-xs uppercase tracking-widest rounded-full border border-white/30 transition-all" data-translate="hero_btn_explore">Explorar a Villa</a>
+      <!-- Calendar Header -->
+      <div class="flex items-center justify-between mb-6">
+        <button onclick="changeMonth(-1)" class="p-2 rounded-full hover:bg-[#FBF9F6] text-[#2C2825] transition-colors" aria-label="Mês anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <h2 id="calendar-month-year" class="font-serif text-lg text-[#2C2825] font-medium"></h2>
+        <button onclick="changeMonth(1)" class="p-2 rounded-full hover:bg-[#FBF9F6] text-[#2C2825] transition-colors" aria-label="Próximo mês">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+
+      <!-- Weekday Labels -->
+      <div class="grid grid-cols-7 text-center text-[11px] font-semibold text-[#8C827A] uppercase tracking-wider mb-3">
+        <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+      </div>
+
+      <!-- Days Grid -->
+      <div id="calendar-days" class="grid grid-cols-7 gap-y-2 text-center text-sm"></div>
+
+      <!-- Legend -->
+      <div class="flex items-center justify-center space-x-6 mt-8 pt-6 border-t border-[#EBE5DE] text-xs text-[#6C625B]">
+        <div class="flex items-center space-x-2">
+          <span class="w-3 h-3 rounded-full bg-white border border-[#EBE5DE]"></span>
+          <span>Disponível</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="w-3 h-3 rounded-full bg-[#C5A880]"></span>
+          <span>Selecionado</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="w-3 h-3 rounded-full bg-stone-200"></span>
+          <span class="line-through">Reservado</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <main class="space-y-24 py-16">
+    <!-- PRICING & ENQUIRY BOX -->
+    <div id="price-summary-container" class="mt-6 bg-white border border-[#EBE5DE] rounded-2xl p-6 md:p-8 shadow-sm">
+      <div id="price-summary">
+        <h4 class="font-bold text-xs uppercase tracking-wider text-[#2C2825]">Resumo da Cotação</h4>
+        <p class="text-xs text-[#8C827A] pt-1">Selecione as datas de check-in e check-out acima.</p>
+      </div>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="about_tag">O Refúgio Perfeito</span>
-        <h3 class="text-3xl md:text-4xl font-serif font-bold text-[#2C2825] leading-snug" data-translate="about_title">Eleganza Rustica & Design Sensoriale</h3>
-        <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="about_p1">Vivi un'esperienza indimenticabile nel cuore di Vila Preá. La nostra villa coniuga un elegante design rustico con la raffinatezza moderna, studiata nei minimi dettagli per offrire il massimo comfort a te, alla tua famiglia o al tuo gruppo di amici.</p>
-        <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="about_p2">Goditi la massima privacy, una piscina privata, una terrazza e un'area gourmet con barbecue, ideale per rilassarsi e ammirare il tramonto con stile dopo una sessione di kitesurf.</p>
+      <!-- HIDDEN FORM CONTAINER -->
+      <div id="enquiry-form-container" class="hidden mt-6 pt-6 border-t border-[#EBE5DE]">
+        <h4 class="font-serif text-lg text-[#2C2825] mb-4">Enviar Solicitação de Reserva</h4>
         
-        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-[#EFECE6] text-center">
+        <input type="hidden" id="selected-checkin">
+        <input type="hidden" id="selected-checkout">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
-            <strong class="block text-xl font-serif font-bold text-[#2C2825]">7</strong>
-            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_guests">Hóspedes</span>
+            <label class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">Nome Completo</label>
+            <input type="text" id="client-name" class="w-full px-4 py-2.5 rounded-lg border border-[#EBE5DE] text-sm focus:outline-none focus:border-[#C5A880]" placeholder="Seu nome">
           </div>
           <div>
-            <strong class="block text-xl font-serif font-bold text-[#2C2825]">2 Suítes</strong>
-            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_suites">Com AC & Luxo</span>
+            <label class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">E-mail</label>
+            <input type="email" id="client-email" class="w-full px-4 py-2.5 rounded-lg border border-[#EBE5DE] text-sm focus:outline-none focus:border-[#C5A880]" placeholder="seu@email.com">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">Telefone / WhatsApp</label>
+            <input type="tel" id="client-phone" class="w-full px-4 py-2.5 rounded-lg border border-[#EBE5DE] text-sm focus:outline-none focus:border-[#C5A880]" placeholder="+39 ... / +55 ...">
           </div>
           <div>
-            <strong class="block text-xl font-serif font-bold text-[#2C2825]">5 Min</strong>
-            <span class="text-[11px] text-[#8C827A] uppercase tracking-wider" data-translate="stat_beach">Até a Praia</span>
+            <label class="block text-xs uppercase tracking-wider text-[#6C625B] font-semibold mb-1">Número de Hóspedes</label>
+            <select id="guest-count" class="w-full px-4 py-2.5 rounded-lg border border-[#EBE5DE] text-sm bg-white focus:outline-none focus:border-[#C5A880]">
+              <option value="1">1 Hóspede</option>
+              <option value="2" selected>2 Hóspedes</option>
+              <option value="3">3 Hóspedes</option>
+              <option value="4">4 Hóspedes</option>
+              <option value="5+">5+ Hóspedes</option>
+            </select>
           </div>
         </div>
+
+        <button onclick="submitEnquiry()" class="w-full bg-[#2C2825] hover:bg-[#C5A880] text-white text-xs uppercase tracking-widest font-semibold py-3.5 rounded-lg transition-colors">
+          Enviar Solicitação
+        </button>
       </div>
-
-      <div class="grid grid-cols-2 gap-4">
-        <img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Piscina Privativa" class="rounded-3xl object-cover h-64 w-full shadow-md">
-        <img src="https://lh3.googleusercontent.com/d/1DPiBAYp6cBslsp-mcmwjCLqti1OCZMkx" alt="Cozinha Integrada" class="rounded-3xl object-cover h-64 w-full shadow-md mt-8">
-      </div>
-    </section>
-
-    <!-- AMENITIES & EXPERIENCES -->
-    <section id="amenities" class="bg-[#F3EFEA] py-20 px-6">
-      <div class="max-w-6xl mx-auto space-y-12">
-        <div class="text-center space-y-3 max-w-xl mx-auto">
-          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="amen_tag">Comodidades Exclusivas</span>
-          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="amen_title">Tudo para o Seu Conforto Absoluto</h3>
-          <p class="text-sm text-[#6C625B]" data-translate="amen_sub">Projetado com atenção meticulosa aos detalhes para proporcionar uma estadia sem preocupações.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
-            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
-              <i class="fa-solid fa-water-ladder"></i>
-            </div>
-            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_1_title">Piscina Privada & Deck</h4>
-            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_1_desc">Amplo terraço privativo e área gourmet com churrasqueira para momentos únicos.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
-            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
-              <i class="fa-solid fa-wind"></i>
-            </div>
-            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_2_title">Suítes Climatizadas</h4>
-            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_2_desc">Quartos amplos com ar condicionado, roupa de cama premium e total privacidade.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
-            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
-              <i class="fa-solid fa-wifi"></i>
-            </div>
-            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_3_title">Wi-Fi Rápido & Guarderia</h4>
-            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_3_desc">Internet de alta velocidade e espaço seguro dedicado para guardar seus equipamentos de kite.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-3xl shadow-sm border border-[#EBE5DE] space-y-3">
-            <div class="w-10 h-10 rounded-2xl bg-[#FBF9F6] text-[#C5A880] flex items-center justify-center text-lg shadow-sm">
-              <i class="fa-solid fa-concierge-bell"></i>
-            </div>
-            <h4 class="font-bold text-sm text-[#2C2825]" data-translate="am_card_4_title">Serviço Personalizado</h4>
-            <p class="text-xs text-[#6C625B] leading-relaxed" data-translate="am_card_4_desc">Suporte para chefs privados, transfers, passeios de UTV/quadriciclo e dicas locais.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PHOTO GALLERY -->
-    <section id="gallery" class="max-w-6xl mx-auto px-6 space-y-8">
-      <div class="text-center space-y-2 max-w-xl mx-auto">
-        <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="gal_tag">Galeria Visual</span>
-        <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="gal_title">Conheça Cada Espaço da Villa</h3>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Piscina e Deck" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/1SRhMK089ffajRnZUFABGXmpEnQk1tBQx" alt="Quarto Queen" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Suíte Climatizada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/1DPiBAYp6cBslsp-mcmwjCLqti1OCZMkx" alt="Cozinha Integrada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/17z36EZhPjC_oGIsfEnng9s_wp9QF4PDQ" alt="Toilette Elegante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="rounded-3xl overflow-hidden shadow-sm h-72">
-          <img src="https://lh3.googleusercontent.com/d/1hs6fbcA4WHYerZvH2s4SKa1nzjx59SJX" alt="Área Gourmet & Varanda" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATION SECTION -->
-    <section id="location" class="bg-[#F3EFEA] py-20 px-6">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="loc_tag">Localização Privilegiada</span>
-          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="loc_title">Vila Preá, Ceará - Paraíso dos Ventos</h3>
-          <p class="text-sm text-[#6C625B] leading-relaxed" data-translate="loc_desc">Situata in Rua Pedro Tomaz, la villa vanta una posizione strategica raggiungibile a piedi: a 5 minuti dalla spiaggia del famoso Rancho Do Kite, a 2 minuti dal supermercato Atacadão do Vale e dal centro di Preá.</p>
-          
-          <div class="space-y-3 text-xs text-[#6C625B]">
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_1">• 5 min a piedi dalla spiaggia (Rancho do Kite)</span></div>
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_2">• 2 min a piedi dal supermercato Atacadão do Vale</span></div>
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-[#C5A880]"></i><span data-translate="loc_3">• Vicino ai migliori ristoranti e alla vita notturna (Cabaré Du Vento)</span></div>
-          </div>
-
-          <a href="https://maps.app.goo.gl/CxfgTGfZJa4rxeC79" target="_blank" class="inline-block px-6 py-3 bg-[#2C2825] hover:bg-[#C5A880] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-colors" data-translate="loc_btn">Ver no Google Maps →</a>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-md h-80 bg-stone-200">
-          <img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Praia do Preá" class="w-full h-full object-cover">
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKING & VISUAL AVAILABILITY CALENDAR -->
-    <section id="booking" class="max-w-4xl mx-auto px-6">
-      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-[#EBE5DE] space-y-8">
-        <div class="text-center space-y-2">
-          <span class="text-xs uppercase tracking-widest font-bold text-[#C5A880]" data-translate="book_tag">Reservas & Disponibilidade</span>
-          <h3 class="text-3xl font-serif font-bold text-[#2C2825]" data-translate="book_title">Planeje Sua Estada</h3>
-          <p class="text-xs text-[#6C625B]">Selecione suas datas no calendário interativo abaixo (dias em cinza claro estão reservados).</p>
-        </div>
-
-        <!-- Visual Interactive Calendar Widget -->
-        <div class="bg-[#FBF9F6] p-6 rounded-2xl border border-[#EBE5DE] space-y-4">
-          <div class="flex items-center justify-between">
-            <h4 id="calendar-month-year" class="font-serif font-bold text-sm text-[#2C2825]"></h4>
-            <div class="flex space-x-2">
-              <button onclick="changeMonth(-1)" class="w-8 h-8 rounded-full bg-white border border-[#EBE5DE] flex items-center justify-center hover:bg-[#C5A880] hover:text-white transition-colors"><i class="fa-solid fa-chevron-left text-xs"></i></button>
-              <button onclick="changeMonth(1)" class="w-8 h-8 rounded-full bg-white border border-[#EBE5DE] flex items-center justify-center hover:bg-[#C5A880] hover:text-white transition-colors"><i class="fa-solid fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
-
-          <!-- Calendar Grid Header -->
-          <div class="grid grid-cols-7 text-center text-[10px] font-bold text-[#8C827A] uppercase">
-            <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
-          </div>
-
-          <!-- Calendar Days Container -->
-          <div id="calendar-days" class="grid grid-cols-7 gap-1.5 text-center text-xs"></div>
-
-          <!-- Legend -->
-          <div class="flex items-center justify-center space-x-6 pt-2 text-[10px] text-[#6C625B]">
-            <div class="flex items-center space-x-1.5"><div class="w-3 h-3 rounded-full bg-white border border-[#C5A880]"></div><span>Disponível</span></div>
-            <div class="flex items-center space-x-1.5"><div class="w-3 h-3 rounded-full bg-[#C5A880]"></div><span>Selecionado</span></div>
-            <div class="flex items-center space-x-1.5"><div class="w-3 h-3 rounded-full bg-stone-300"></div><span>Reservado / Indisponível</span></div>
-          </div>
-        </div>
-
-        <!-- Selected Dates Summary & Enquiry Form -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-          <div class="space-y-4">
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1">Check-in</label>
-                <input type="text" id="selected-checkin" readonly placeholder="Selecione no calendário" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs outline-none font-medium text-center">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1">Check-out</label>
-                <input type="text" id="selected-checkout" readonly placeholder="Selecione no calendário" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs outline-none font-medium text-center">
-              </div>
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-[#2C2825] uppercase tracking-wider mb-1" data-translate="lbl_guests">Hóspedes</label>
-              <select id="guest-count" class="w-full bg-[#FBF9F6] border border-[#EBE5DE] rounded-2xl p-3 text-xs focus:ring-1 focus:ring-[#C5A880] outline-none font-medium">
-                <option value="1">1 Hóspede</option>
-                <option value="2">2 Hóspedes</option>
-                <option value="4">4 Hóspedes</option>
-                <option value="6">6 Hóspedes</option>
-                <option value="7" selected>Até 7 Hóspedes</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="bg-[#FBF9F6] p-6 rounded-2xl border border-[#EBE5DE] flex flex-col justify-between space-y-4">
-            <div id="price-summary" class="space-y-3">
-              <h4 class="font-bold text-xs uppercase tracking-wider text-[#2C2825]" data-translate="summary_title">Resumo da Cotação</h4>
-              <p class="text-xs text-[#8C827A]">Clique em uma data de check-in e depois em uma data de check-out no calendário acima.</p>
-            </div>
-
-            <div id="enquiry-form-container" class="space-y-3 hidden pt-4 border-t border-[#EBE5DE]">
-              <input type="text" id="client-name" placeholder="Seu Nome Completo" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]">
-              <input type="email" id="client-email" placeholder="Seu E-mail" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]">
-              <input type="tel" id="client-phone" placeholder="WhatsApp / Telefone" class="w-full bg-white border border-[#EBE5DE] rounded-xl p-2.5 text-xs outline-none focus:border-[#C5A880]">
-              <button onclick="submitEnquiry()" class="w-full py-3 bg-[#C5A880] hover:bg-[#b0936b] text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-colors shadow-sm" data-translate="btn_submit_enquiry">Enviar Solicitação de Reserva</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-[#2C2825] text-stone-300 py-12 px-6 border-t border-stone-800">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
-      <div class="space-y-2">
-        <h4 class="font-serif font-bold text-sm text-white tracking-widest uppercase">Ariah Luxury Villas</h4>
-        <p class="text-stone-400 leading-relaxed">Rua Pedro Tomaz, Vila Preá, Cruz - CE, Brasil.</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="font-bold text-white uppercase tracking-wider text-[11px]">Contato Direto</h4>
-        <p class="text-stone-400">Email: casaariahluxuryvillas@gmail.com</p>
-        <p class="text-stone-400">WhatsApp: +55 65 99673 1160</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="font-bold text-white uppercase tracking-wider text-[11px]">Redes Sociais</h4>
-        <div class="flex space-x-3 pt-1">
-          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-[#C5A880] text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/5565996731160" target="_blank" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-emerald-600 text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto border-t border-stone-800 mt-8 pt-6 text-center text-[10px] text-stone-500">
-      &copy; 2026 Ariah Luxury Villas. Todos os direitos reservados.
-    </div>
+  <footer class="w-full border-t border-[#EBE5DE] py-8 mt-16 text-center text-xs text-[#8C827A]">
+    <p>&copy; 2026 Ariah Luxury Villas. Todos os direitos reservados.</p>
   </footer>
 
   <!-- SCRIPT ENGINE -->
@@ -318,23 +145,35 @@
     let selectedCheckinDate = null;
     let selectedCheckoutDate = null;
 
-    // Fetch booked dates on page load
+    // Helper to format date without timezone shifting bugs
+    function formatLocalDate(dateObj) {
+      const year = dateObj.getFullYear();
+      const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const day = String(dateObj.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    // Fetch booked dates on page load with robust error checking
     async function fetchBookedDates() {
       try {
         const res = await fetch(`${WEB_APP_URL}?action=get_booked_dates`);
         const data = await res.json();
-        if (data && data.booked) {
+        
+        if (data && data.booked && Array.isArray(data.booked)) {
           data.booked.forEach(range => {
-            // Parse YYYY-MM-DD safely as local year, month, day
-            const [sYear, sMonth, sDay] = range.start.split('-').map(Number);
-            const [eYear, eMonth, eDay] = range.end.split('-').map(Number);
+            if (!range.start || !range.end) return;
             
-            let curr = new Date(sYear, sMonth - 1, sDay);
-            let end = new Date(eYear, eMonth - 1, eDay);
+            const sParts = range.start.split('-').map(Number);
+            const eParts = range.end.split('-').map(Number);
             
-            while (curr < end) {
-              bookedDatesSet.add(formatLocalDate(curr));
-              curr.setDate(curr.getDate() + 1);
+            if (sParts.length === 3 && eParts.length === 3) {
+              let curr = new Date(sParts[0], sParts[1] - 1, sParts[2]);
+              let end = new Date(eParts[0], eParts[1] - 1, eParts[2]);
+              
+              while (curr < end) {
+                bookedDatesSet.add(formatLocalDate(curr));
+                curr.setDate(curr.getDate() + 1);
+              }
             }
           });
         }
@@ -358,15 +197,15 @@
       const daysContainer = document.getElementById('calendar-days');
       daysContainer.innerHTML = '';
 
-      // Blank padding for days before month start
       for (let i = 0; i < firstDayIndex; i++) {
         daysContainer.innerHTML += `<div></div>`;
       }
 
-      const todayStr = new Date().toISOString().split('T')[0];
+      const todayStr = formatLocalDate(new Date());
 
       for (let d = 1; d <= totalDays; d++) {
-        const dayStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d, '0').padStart(2, '0')}`;
+        const dayDate = new Date(year, month, d);
+        const dayStr = formatLocalDate(dayDate);
         const isBooked = bookedDatesSet.has(dayStr);
         const isPast = dayStr < todayStr;
 
@@ -416,6 +255,28 @@
           document.getElementById('selected-checkin').value = dateStr;
           return;
         }
+        
+        let curr = new Date(selectedCheckinDate);
+        let end = new Date(dateStr);
+        curr.setDate(curr.getDate() + 1);
+        let hasConflict = false;
+        while (curr < end) {
+          if (bookedDatesSet.has(formatLocalDate(curr))) {
+            hasConflict = true;
+            break;
+          }
+          curr.setDate(curr.getDate() + 1);
+        }
+
+        if (hasConflict) {
+          alert("O período selecionado inclui datas já reservadas. Por favor, escolha outro intervalo.");
+          selectedCheckinDate = dateStr;
+          document.getElementById('selected-checkin').value = dateStr;
+          document.getElementById('selected-checkout').value = '';
+          renderCalendar();
+          return;
+        }
+
         selectedCheckoutDate = dateStr;
         document.getElementById('selected-checkout').value = dateStr;
         calculatePricing(selectedCheckinDate, selectedCheckoutDate);
@@ -431,7 +292,6 @@
       const d2 = new Date(checkout);
       const diffDays = Math.ceil(Math.abs(d2 - d1) / (1000 * 60 * 60 * 24));
 
-      // Pricing rules calculation (Standard 1000 BRL, Weekends 1200 BRL, NYE 8000 BRL)
       let totalPrice = 0;
       let minStay = 2;
       let currentDate = new Date(d1);
@@ -497,20 +357,21 @@
           body: JSON.stringify(formData)
         });
 
-        alert("Solicitação enviada com sucesso! A planilha foi atualizada e a notificação foi enviada para casaariahluxuryvillas@gmail.com.");
+        alert("Solicitação enviada com sucesso! A planilha foi atualizada e a notificação foi enviada.");
         document.getElementById('client-name').value = '';
         document.getElementById('client-email').value = '';
         document.getElementById('client-phone').value = '';
         document.getElementById('enquiry-form-container').classList.add('hidden');
+        selectedCheckinDate = null;
+        selectedCheckoutDate = null;
+        fetchBookedDates();
       } catch (error) {
         console.error("Erro ao enviar:", error);
         alert("Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.");
       }
     }
 
-    // Initialize calendar on load
     window.onload = fetchBookedDates;
   </script>
-
 </body>
 </html>
