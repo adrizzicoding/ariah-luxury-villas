@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ariah Luxury Villas | Praia do Preá</title>
+  <title>Ariah Luxury Villas | Praia do Preá, Ceará</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,23 +22,82 @@
 
   <!-- HEADER -->
   <header class="w-full border-b border-[#EBE5DE] bg-[#FBF9F6]/90 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       <div>
         <span class="font-serif text-xl tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
         <span class="block text-[10px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
       </div>
-      <div class="text-xs uppercase tracking-wider text-[#6C625B] font-medium">
-        Reservation Enquiry
-      </div>
+      <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest text-[#6C625B] font-medium">
+        <a href="#the-villa" class="hover:text-[#C5A880] transition-colors">A Vila</a>
+        <a href="#amenities" class="hover:text-[#C5A880] transition-colors">Comodidades</a>
+        <a href="#location" class="hover:text-[#C5A880] transition-colors">Localização</a>
+        <a href="#reserve" class="hover:text-[#C5A880] transition-colors font-bold">Reservas</a>
+      </nav>
+      <a href="#reserve" class="bg-[#2C2825] hover:bg-[#C5A880] text-white text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full transition-colors">
+        Reservar
+      </a>
     </div>
   </header>
 
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-3xl mx-auto px-6 py-12">
+  <!-- HERO SECTION -->
+  <section class="relative h-[80vh] min-h-[500px] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-50 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#2C2825] via-transparent to-black/40"></div>
+    <div class="relative z-10 text-center max-w-2xl mx-auto px-6">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#C5A880] font-semibold mb-3 block">Exclusividade & Conforto à Beira-Mar</span>
+      <h1 class="font-serif text-4xl md:text-6xl mb-6 tracking-wide leading-tight">Villa Maré</h1>
+      <p class="text-sm md:text-base text-stone-200 font-light mb-8 max-w-lg mx-auto">Um refúgio de luxo na Praia do Preá, projetado para harmonizar elegância arquitetônica e a beleza natural do Ceará.</p>
+      <a href="#reserve" class="inline-block bg-[#C5A880] hover:bg-white hover:text-[#2C2825] text-white text-xs uppercase tracking-widest font-semibold px-8 py-4 rounded-full transition-all shadow-lg">
+        Verificar Disponibilidade
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT / THE VILLA -->
+  <section id="the-villa" class="py-24 max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">A Experiência</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-[#2C2825] mb-6">Arquitetura sofisticada integrada à natureza</h2>
+        <p class="text-sm text-[#6C625B] leading-relaxed mb-4">A Villa Maré oferece amplos espaços iluminados pela luz natural, acabamentos artesanais refinados e total privacidade para relaxar após um dia de kitesurf ou contemplando o pôr do sol no Preá.</p>
+        <p class="text-sm text-[#6C625B] leading-relaxed">Equipada com comodidades de alto padrão, áreas de convivência integradas e suítes confortáveis para receber família e amigos com máxima sofisticação.</p>
+      </div>
+      <div class="bg-[#EBE5DE] rounded-2xl h-96 flex items-center justify-center text-[#8C827A] text-xs uppercase tracking-widest border border-[#EBE5DE]">
+        [Galeria de Fotos da Villa]
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section id="amenities" class="py-20 bg-white border-y border-[#EBE5DE]">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Conforto Absoluto</span>
+        <h2 class="font-serif text-3xl text-[#2C2825]">Comodidades Exclusivas</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-xl bg-[#FBF9F6] border border-[#EBE5DE]">
+          <h3 class="font-serif text-lg font-semibold mb-2 text-[#2C2825]">Piscina & Deck Privativo</h3>
+          <p class="text-xs text-[#6C625B]">Área externa privativa ideal para momentos de lazer e descanso sob o sol do Ceará.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-[#FBF9F6] border border-[#EBE5DE]">
+          <h3 class="font-serif text-lg font-semibold mb-2 text-[#2C2825]">Wi-Fi de Alta Velocidade</h3>
+          <p class="text-xs text-[#6C625B]">Conexão estável em toda a propriedade para trabalho remoto ou entretenimento.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-[#FBF9F6] border border-[#EBE5DE]">
+          <h3 class="font-serif text-lg font-semibold mb-2 text-[#2C2825]">Localização Privilegiada</h3>
+          <p class="text-xs text-[#6C625B]">Próximo aos melhores pontos de kitesurf e restaurantes da Praia do Preá.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section id="reserve" class="max-w-3xl mx-auto px-6 py-24">
     
-    <!-- INTRO -->
-    <div class="text-center mb-10">
-      <h1 class="font-serif text-3xl md:text-4xl text-[#2C2825] mb-3">Reserve sua Estadia</h1>
+    <div class="text-center mb-12">
+      <span class="text-xs uppercase tracking-widest text-[#C5A880] font-semibold block mb-2">Planeje sua Viagem</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-[#2C2825] mb-3">Reserve sua Estadia</h2>
       <p class="text-sm text-[#6C625B] max-w-md mx-auto">Selecione as datas de check-in e check-out no calendário abaixo para verificar a disponibilidade em tempo real.</p>
     </div>
 
@@ -50,7 +109,7 @@
         <button onclick="changeMonth(-1)" class="p-2 rounded-full hover:bg-[#FBF9F6] text-[#2C2825] transition-colors" aria-label="Mês anterior">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
         </button>
-        <h2 id="calendar-month-year" class="font-serif text-lg text-[#2C2825] font-medium"></h2>
+        <h3 id="calendar-month-year" class="font-serif text-lg text-[#2C2825] font-medium"></h3>
         <button onclick="changeMonth(1)" class="p-2 rounded-full hover:bg-[#FBF9F6] text-[#2C2825] transition-colors" aria-label="Próximo mês">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
         </button>
@@ -129,11 +188,15 @@
       </div>
     </div>
 
-  </main>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="w-full border-t border-[#EBE5DE] py-8 mt-16 text-center text-xs text-[#8C827A]">
-    <p>&copy; 2026 Ariah Luxury Villas. Todos os direitos reservados.</p>
+  <footer class="w-full border-t border-[#EBE5DE] py-12 text-center text-xs text-[#8C827A] bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <span class="font-serif text-sm tracking-widest text-[#2C2825] uppercase font-semibold block mb-2">Ariah Luxury Villas</span>
+      <p class="mb-4">Praia do Preá, Ceará - Brasil</p>
+      <p>&copy; 2026 Ariah Luxury Villas. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <!-- SCRIPT ENGINE -->
@@ -153,7 +216,7 @@
       return `${year}-${month}-${day}`;
     }
 
-    // Fetch booked dates on page load with robust error checking
+    // Fetch booked dates on page load with robust error checking & +1 offset correction
     async function fetchBookedDates() {
       try {
         const res = await fetch(`${WEB_APP_URL}?action=get_booked_dates`);
@@ -167,7 +230,7 @@
             const eParts = range.end.split('-').map(Number);
             
             if (sParts.length === 3 && eParts.length === 3) {
-              // Add 1 day to correct the ICS channel export offset
+              // Add 1 day offset correction to match ICS channel exports precisely
               let curr = new Date(sParts[0], sParts[1] - 1, sParts[2] + 1);
               let end = new Date(eParts[0], eParts[1] - 1, eParts[2] + 1);
               
@@ -313,7 +376,7 @@
 
       if (diffDays < minStay) {
         summaryContainer.innerHTML = `
-          <h4 class="font-bold text-xs uppercase tracking-wider text-red-600">Estadística Mínima Não Atingida</h4>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-red-600">Estadia Mínima Não Atingida</h4>
           <p class="text-xs text-red-500">Para o período selecionado, a estadia mínima exigida é de <strong>${minStay} noites</strong> (você selecionou ${diffDays}).</p>
         `;
         enquiryForm.classList.add('hidden');
