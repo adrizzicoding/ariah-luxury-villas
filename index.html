@@ -16,6 +16,17 @@
     h1, h2, h3, .font-serif {
       font-family: 'Playfair Display', serif;
     }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-[#C5A880] selection:text-white">
@@ -23,8 +34,8 @@
   <!-- HEADER & LANGUAGE SELECTOR -->
   <header class="w-full border-b border-[#E5DFD5] bg-[#F7F4EF]/95 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-14 w-auto object-contain mix-blend-multiply">
+      <div class="flex items-center space-x-3 h-full py-3">
+        <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-full w-auto object-contain mix-blend-multiply">
         <div>
           <span class="font-serif text-lg tracking-widest text-[#2C2825] uppercase font-semibold">Ariah Luxury Villas</span>
           <span class="block text-[9px] tracking-widest text-[#8C827A] uppercase">Praia do Preá • Ceará</span>
@@ -59,9 +70,14 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO CAROUSEL SECTION -->
   <section class="relative h-[85vh] min-h-[550px] flex items-center justify-center text-white overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1ULZ209b4rCwfKUhkeI7rLAD8nKszuyzu');"></div>
+    <!-- Carousel Background Slides -->
+    <div class="hero-slide active" style="background-image: url('https://lh3.googleusercontent.com/d/1ULZ209b4rCwfKUhkeI7rLAD8nKszuyzu');"></div>
+    <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/d/1_IWrQBfP2uJEEagBSIaCs8-NZgTh-Etd');"></div>
+    <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/d/1OyHFHdy08BZdJf7RChiI9Q3kjWptc8A_');"></div>
+    <div class="hero-slide" style="background-image: url('https://lh3.googleusercontent.com/d/1Os8gdshwa32fb5bXafS8DO5yHl6KTd4A');"></div>
+
     <div class="absolute inset-0 bg-gradient-to-t from-[#2C2825] via-black/30 to-black/40"></div>
     
     <div class="relative z-10 text-center max-w-2xl mx-auto px-6">
@@ -120,24 +136,18 @@
       <h2 class="gallery-title font-serif text-3xl md:text-4xl text-[#2C2825]">Explore the Spaces</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Beachfront" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1ycU_s3EoI8VRME7ngb7RVIlXC1B-sDrv" alt="Deck" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1Os8gdshwa32fb5bXafS8DO5yHl6KTd4A" alt="Pool" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1hs6fbcA4WHYerZvH2s4SKa1nzjx59SJX" alt="Kitchen & Dining" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1dBVnaNBUv9Y9W5mu_0pZP0qvjp3gSggj" alt="Bedroom" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="overflow-hidden rounded-2xl shadow-sm">
-        <img src="https://lh3.googleusercontent.com/d/1hs6fbcA4WHYerZvH2s4SKa1nzjx59SJX" alt="Dining Area" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500">
-      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/172iEv9cfxhVszl5QTCBqIAa0gCWblp7H" alt="Property" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1f9kB4eA7D_XwSX9upzX3XAI381IEScDj" alt="Living Room" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1IlL_FhTsW20L_Hgy87y993R252el0_WE" alt="Kitchen" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1wVHCBRDzjbrcQW5W64L-v8E0OEu3EYEH" alt="Bed Detail" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/13xpdX4K4yQuDwHV3YOCGCh28miSk4rJU" alt="Day Pool" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1_IWrQBfP2uJEEagBSIaCs8-NZgTh-Etd" alt="Night Pool" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1aA9apVkgIyEylOYzx_glc4iMWI1o9m8E" alt="Stairs" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/16WDxIq5_qF7d4kla5b2XIAh6HkaAsYAE" alt="Toilet Detail" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1OyHFHdy08BZdJf7RChiI9Q3kjWptc8A_" alt="Drone View" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1wAvrTVEPC66KKs77e9TpuvnVGNZ4hcqG" alt="Room 2" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1YEcktArKUZAcNwGkRi1UQ6ttpVh4iLe6" alt="Pool 1" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
+      <div class="overflow-hidden rounded-2xl shadow-sm"><img src="https://lh3.googleusercontent.com/d/1L5c0BRRFA1wCdi7fjTJgRsdcRkWsEE4U" alt="Beach" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"></div>
     </div>
   </section>
 
@@ -251,14 +261,14 @@
   <!-- FOOTER -->
   <footer class="w-full border-t border-[#E5DFD5] py-12 text-center text-xs text-[#8C827A] bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-10 w-auto mx-auto mb-3 object-contain mix-blend-multiply opacity-85">
+      <img src="https://lh3.googleusercontent.com/d/1oKm6c43UlbPdTftB9pOVQMDmlqQwI6Gs" alt="Ariah Logo" class="h-12 w-auto mx-auto mb-3 object-contain mix-blend-multiply opacity-85">
       <span class="font-serif text-sm tracking-widest text-[#2C2825] uppercase font-semibold block mb-2">Ariah Luxury Villas</span>
       <p class="footer-loc mb-4">Praia do Preá, Ceará - Brazil</p>
       <p class="footer-copy">&copy; 2026 Ariah Luxury Villas. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- SCRIPT ENGINE & 6-LANGUAGE DICTIONARY -->
+  <!-- SCRIPT ENGINE -->
   <script>
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyRuXPyVgV4_fzFwMpIDEsEidDjdHpl0U2l2DDdwQTTgtpKURTGm6Xoj4jtcs5dyumB6Q/exec";
     
@@ -267,6 +277,17 @@
     let selectedCheckinDate = null;
     let selectedCheckoutDate = null;
     let currentLang = 'en';
+
+    // Hero Carousel Script
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    function nextHeroSlide() {
+      if(slides.length === 0) return;
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    setInterval(nextHeroSlide, 5000);
 
     const translations = {
       en: {
